@@ -4,9 +4,12 @@ const StyledHeader = styled("nav", {
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  padding: "1rem 4rem",
-  backgroundColor: "#020C1B",
+  padding: "1rem 24rem",
   fontSize: "1rem",
+  position: "fixed",
+  right: 0,
+  left: 0,
+  top: 0,
 });
 
 const StyledAnchorList = styled("ul", {
@@ -14,7 +17,6 @@ const StyledAnchorList = styled("ul", {
   alignItems: "center",
   gap: "1rem",
   "& *": {
-    color: "white",
     textDecoration: "none",
     listStyle: "none",
   },

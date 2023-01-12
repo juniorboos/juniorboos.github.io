@@ -1,4 +1,4 @@
-import React from "react";
+import { Typography } from "~atoms/typography";
 import PortfolioLogo from "../../../assets/icons/portfolio-logo.svg";
 import { StyledAnchorList, StyledHeader } from "./header.styles";
 
@@ -8,16 +8,24 @@ const Header = () => {
       <img src={PortfolioLogo} width={36} height={36} />
       <StyledAnchorList>
         <li>
-          <a href="/">About</a>
+          <Typography as="a" href="/">
+            About
+          </Typography>
         </li>
         <li>
-          <a href="/">Experience</a>
+          <Typography as="a" href="/">
+            Experience
+          </Typography>
         </li>
         <li>
-          <a href="/">Work</a>
+          <Typography as="a" href="/">
+            Work
+          </Typography>
         </li>
         <li>
-          <a href="/">Contact</a>
+          <Typography as="a" href="/">
+            Contact
+          </Typography>
         </li>
       </StyledAnchorList>
     </StyledHeader>
