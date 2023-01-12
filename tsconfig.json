@@ -18,7 +18,10 @@
     "jsx": "react-jsx",
     "baseUrl": "src",
     "paths": {
-      "~stitches": ["./theme/stitches.config.ts"]
+      "~stitches": ["./theme/stitches.config.ts"],
+      "~atoms/*": ["./components/atoms/*"],
+      "~molecules/*": ["./components/molecules/*"],
+      "~theme/*": ["./theme/*"]
     }
   },
   "include": ["src"],
