@@ -1,6 +1,6 @@
 import { styled } from "~stitches";
 
-const StyledHeader = styled("nav", {
+const StyledHeader = styled("header", {
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
@@ -10,16 +10,16 @@ const StyledHeader = styled("nav", {
   right: 0,
   left: 0,
   top: 0,
+  zIndex: 9999,
 });
 
-const StyledAnchorList = styled("ul", {
+const StyledNav = styled("nav", {
   display: "flex",
   alignItems: "center",
   gap: "1rem",
-  "& *": {
+  "& a": {
     textDecoration: "none",
-    listStyle: "none",
   },
 });
 
-export { StyledAnchorList, StyledHeader };
+export { StyledNav, StyledHeader };
