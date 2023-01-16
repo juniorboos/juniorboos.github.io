@@ -4,16 +4,21 @@ const StyledIntroWrapper = styled("div", {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  alignItems: "flex-start",
-  gap: "4rem",
-  minHeight: "100vh",
+  alignItems: "center",
+  gap: "$8",
+  minHeight: "$section",
   position: "relative",
+
+  "@bp1": {
+    gap: "$12",
+    alignItems: "flex-start",
+  },
 });
 
 const StyledTextWrapper = styled("div", {
   display: "flex",
   flexDirection: "column",
-  gap: "2rem",
+  gap: "$8",
 });
 
 const woble = keyframes({
@@ -25,11 +30,16 @@ const woble = keyframes({
 
 const StyledRotatingLogo = styled("img", {
   position: "absolute",
-  right: "5rem",
-  top: "50%",
+  right: "-$15",
+  top: "$15",
   opacity: "10%",
-  width: "20rem",
+  width: "$logo-l",
   animation: `${woble} 10s ease 0s infinite alternate `,
+
+  "@bp1": {
+    right: "$13",
+    top: "50%",
+  },
 });
 
 export { StyledIntroWrapper, StyledTextWrapper, StyledRotatingLogo };

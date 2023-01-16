@@ -14,7 +14,13 @@ const Typography = styled("p", {
       s: { fontSize: "$s" },
       m: { fontSize: "$m" },
       l: { fontSize: "$l" },
-      xl: { fontSize: "$xl" },
+      xl: {
+        fontSize: "$l",
+
+        "@bp1": {
+          padding: "$xl",
+        },
+      },
     },
     weight: {
       regular: { fontWeight: "$regular" },

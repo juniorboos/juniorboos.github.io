@@ -1,6 +1,11 @@
 import { createStitches } from "@stitches/react";
 export * from "@stitches/react";
 export const { styled, css } = createStitches({
+  media: {
+    bp1: "(min-width: 768px)",
+    bp2: "(min-width: 1024px)",
+    bp3: "(min-width: 1440px)",
+  },
   theme: {
     colors: {
       textPrimary: "#FFFFFF",
@@ -8,6 +13,7 @@ export const { styled, css } = createStitches({
       textAccent: "#E964FF",
       textContrast: "#000000",
       primary: "#E964FF",
+      background: "#020C1B",
     },
     space: {
       1: "0.25rem",
@@ -23,6 +29,11 @@ export const { styled, css } = createStitches({
       11: "3.5rem",
       12: "4rem",
       13: "5rem",
+      14: "6rem",
+      15: "8rem",
+      16: "12rem",
+      17: "18rem",
+      18: "24rem",
     },
     fontSizes: {
       s: "0.75rem",
@@ -42,6 +53,8 @@ export const { styled, css } = createStitches({
     letterSpacings: {},
     sizes: {
       "vertical-line": "8rem",
+      section: "100vh",
+      "logo-l": "20rem",
     },
     borderWidths: {
       px: "1px",
@@ -55,7 +68,9 @@ export const { styled, css } = createStitches({
       2: "10px",
     },
     shadows: {},
-    zIndices: {},
+    zIndices: {
+      maximum: 9999,
+    },
     transitions: {},
   },
 });
