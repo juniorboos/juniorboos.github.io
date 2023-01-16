@@ -21,6 +21,10 @@ export default defineConfig({
         replacement: path.resolve(__dirname, "./src/components/molecules"),
       },
       {
+        find: "~sections",
+        replacement: path.resolve(__dirname, "./src/components/sections"),
+      },
+      {
         find: "~theme",
         replacement: path.resolve(__dirname, "./src/theme"),
       },

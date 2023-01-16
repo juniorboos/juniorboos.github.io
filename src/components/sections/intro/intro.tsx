@@ -6,6 +6,7 @@ import {
   StyledTextWrapper,
 } from "./intro.styles";
 import PortfolioLogo from "../../../assets/icons/portfolio-logo.svg";
+import { SocialLinks } from "~molecules/social-links";
 
 const Intro = () => {
   return (
@@ -25,6 +26,7 @@ const Intro = () => {
           Because if the cover does not impress you, what else can?
         </Typography>
       </StyledTextWrapper>
+      <SocialLinks />
       <Button>Download my CV</Button>
     </StyledIntroWrapper>
   );

@@ -21,6 +21,7 @@
       "~stitches": ["./theme/stitches.config.ts"],
       "~atoms/*": ["./components/atoms/*"],
       "~molecules/*": ["./components/molecules/*"],
+      "~sections/*": ["./components/sections/*"],
       "~theme/*": ["./theme/*"]
     }
   },
