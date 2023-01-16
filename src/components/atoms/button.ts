@@ -2,17 +2,19 @@ import { styled } from "~stitches";
 
 const Button = styled("button", {
   background: "none",
-  border: "1px solid #E964FF",
-  borderRadius: "10px",
-  color: "#E964FF",
-  padding: "0.75rem 3rem",
+  borderWidth: "$px",
+  borderStyle: "$solid",
+  borderColor: "$primary",
+  borderRadius: "$2",
+  color: "$textAccent",
+  padding: "$3 $10",
   cursor: "pointer",
-  fontSize: "1rem",
+  fontSize: "$m",
 
   "&:hover": {
-    backgroundColor: "#E964FF",
-    color: "black",
-    fontWeight: "bold",
+    backgroundColor: "$primary",
+    color: "$textContrast",
+    fontWeight: "$bold",
   },
 });
 

@@ -1,31 +1,25 @@
 import { styled } from "~stitches";
 
 const Typography = styled("p", {
-  color: "#FFFFFF",
-  fontSize: "1rem",
+  color: "$textPrimary",
+  fontSize: "$m",
 
   variants: {
     color: {
-      primary: {
-        color: "#FFFFFF",
-      },
-      secondary: {
-        color: "#B8A8D1",
-      },
-      accent: {
-        color: "#E964FF",
-      },
+      primary: { color: "$textPrimary" },
+      secondary: { color: "$textSecondary" },
+      accent: { color: "$textAccent" },
     },
     size: {
-      xl: { fontSize: "3rem" },
-      l: { fontSize: "2rem" },
-      m: { fontSize: "1rem" },
-      s: { fontSize: "0.75rem" },
+      s: { fontSize: "$s" },
+      m: { fontSize: "$m" },
+      l: { fontSize: "$l" },
+      xl: { fontSize: "$xl" },
     },
     weight: {
-      bold: { fontWeight: "bold" },
-      regular: { fontWeight: "regular" },
-      thin: { fontWeight: "thin" },
+      regular: { fontWeight: "$regular" },
+      thin: { fontWeight: "$thin" },
+      bold: { fontWeight: "$bold" },
     },
   },
 });
