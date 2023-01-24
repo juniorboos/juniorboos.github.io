@@ -21,15 +21,4 @@ const SocialLinksWrapper = styled("div", {
   },
 });
 
-const VerticalLine = styled("div", {
-  display: "none",
-  borderLeftWidth: "$vertical-line",
-  borderLeftStyle: "$solid",
-  height: "$vertical-line",
-
-  "@bp1": {
-    display: "block",
-  },
-});
-
-export { SocialLinksWrapper, VerticalLine };
+export { SocialLinksWrapper };

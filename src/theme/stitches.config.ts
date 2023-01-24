@@ -58,7 +58,7 @@ export const { styled, css } = createStitches({
     },
     borderWidths: {
       px: "1px",
-      "vertical-line": "3px",
+      line: "3px",
     },
     borderStyles: {
       solid: "solid",
@@ -67,7 +67,10 @@ export const { styled, css } = createStitches({
       1: "5px",
       2: "10px",
     },
-    shadows: {},
+    shadows: {
+      primary: "#E964FF",
+      background: "#020C1B",
+    },
     zIndices: {
       maximum: 9999,
     },

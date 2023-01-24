@@ -7,6 +7,7 @@ const AppWrapper = styled("div", {
   display: "flex",
   flexDirection: "column",
   gap: "$12",
+  overflowX: "hidden",
 
   "@bp1": {
     padding: "0 $15",

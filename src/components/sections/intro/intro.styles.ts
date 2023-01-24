@@ -1,6 +1,6 @@
 import { styled, keyframes } from "~stitches";
 
-const StyledIntroWrapper = styled("div", {
+const StyledIntroWrapper = styled("section", {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",

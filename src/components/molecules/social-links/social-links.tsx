@@ -1,5 +1,6 @@
 import { BsInstagram, BsGithub, BsLinkedin } from "react-icons/bs";
-import { SocialLinksWrapper, VerticalLine } from "./social-links.styles";
+import { VerticalLine } from "~atoms/vertical-line";
+import { SocialLinksWrapper } from "./social-links.styles";
 
 const SocialLinks = () => {
   return (
