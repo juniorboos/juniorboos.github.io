@@ -2,8 +2,7 @@ import { styled, keyframes } from "~stitches";
 
 const StyledIntroWrapper = styled("section", {
   display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
+  justifyContent: "space-between",
   alignItems: "center",
   gap: "$8",
   minHeight: "$section",
@@ -11,35 +10,110 @@ const StyledIntroWrapper = styled("section", {
 
   "@bp1": {
     gap: "$12",
-    alignItems: "flex-start",
   },
 });
 
 const StyledTextWrapper = styled("div", {
   display: "flex",
+  alignItems: "flex-start",
   flexDirection: "column",
   gap: "$8",
+
+  position: "relative",
+  zIndex: 4,
+
+  "& button": {
+    marginTop: "$8",
+  },
+
+  "@bp2": {
+    minWidth: 420,
+  },
 });
 
 const woble = keyframes({
-  "0%": { transform: "translateY(-50%) rotate(-30deg)" },
-  "40%": { transform: "translateY(-50%) rotate(-15deg)" },
-  "70%": { transform: "translateY(-50%) rotate(-25deg)" },
-  "100%": { transform: "translateY(-50%) rotate(-10deg)" },
+  "0%": { transform: "rotate(0deg)" },
+  "40%": { transform: "rotate(-15deg)" },
+  "70%": { transform: "rotate(-10deg)" },
+  "100%": { transform: "rotate(0deg)" },
 });
 
 const StyledRotatingLogo = styled("img", {
   position: "absolute",
-  right: "-$15",
-  top: "$15",
-  opacity: "10%",
-  width: "$logo-l",
-  animation: `${woble} 10s ease 0s infinite alternate `,
+  right: 0,
+  bottom: 0,
+  zIndex: 3,
+  animation: `${woble} 4s ease 0s infinite alternate-reverse `,
+  boxShadow: "0px 4px 10px $background",
 
   "@bp1": {
-    right: "$13",
-    top: "50%",
+    top: 0,
+    width: "$logo-l",
   },
 });
 
-export { StyledIntroWrapper, StyledTextWrapper, StyledRotatingLogo };
+const StyledPictureWrapper = styled("div", {
+  position: "relative",
+  height: 300,
+  display: "flex",
+
+  "@bp2": {
+    minWidth: "50%",
+  },
+});
+
+const StyledProfilePicture = styled("img", {
+  zIndex: 4,
+  position: "absolute",
+  right: 0,
+  display: "none",
+
+  "@bp2": {
+    display: "block",
+
+    width: 500,
+  },
+
+  "@bp3": {
+    maxWidth: "100%",
+  },
+});
+
+const StyledRectangle = styled("img", {
+  width: "200vw",
+  position: "absolute",
+  right: 0,
+  zIndex: 2,
+  opacity: "50%",
+
+  animation: `${woble} 10s ease 0s infinite alternate `,
+
+  "@bp2": {
+    width: 540,
+    opacity: "100%",
+  },
+
+  variants: {
+    below: {
+      true: {
+        zIndex: 1,
+        top: "10%",
+
+        animation: `${woble} 10s ease-in 0s infinite alternate `,
+
+        "@bp1": {
+          top: "30%",
+        },
+      },
+    },
+  },
+});
+
+export {
+  StyledIntroWrapper,
+  StyledTextWrapper,
+  StyledRotatingLogo,
+  StyledProfilePicture,
+  StyledRectangle,
+  StyledPictureWrapper,
+};

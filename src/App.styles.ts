@@ -14,7 +14,7 @@ const AppWrapper = styled("div", {
   },
 
   "@bp2": {
-    padding: "0 $16",
+    padding: "0 $15",
   },
 
   "@bp3": {

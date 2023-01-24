@@ -15,9 +15,9 @@ const SocialLinksWrapper = styled("div", {
 
   "@bp1": {
     flexDirection: "column",
-    position: "fixed",
-    left: "$13",
-    top: "60vh",
+    position: "absolute",
+    left: "-$14",
+    top: "50%",
   },
 });
 

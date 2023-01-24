@@ -2,16 +2,21 @@ import { Button } from "~atoms/button";
 import { Typography } from "~atoms/typography";
 import {
   StyledIntroWrapper,
-  StyledRotatingLogo,
+  StyledProfilePicture,
+  StyledPictureWrapper,
+  StyledRectangle,
   StyledTextWrapper,
+  StyledRotatingLogo,
 } from "./intro.styles";
 import PortfolioLogo from "../../../assets/icons/portfolio-logo.svg";
+import ProfilePicture from "../../../assets/images/profile-transparent.png";
+import RectAbove from "../../../assets/images/rect-above.svg";
+import RectBelow from "../../../assets/images/rect-below.svg";
 import { SocialLinks } from "~molecules/social-links";
 
 const Intro = () => {
   return (
     <StyledIntroWrapper>
-      <StyledRotatingLogo src={PortfolioLogo} />
       <StyledTextWrapper>
         <Typography color="accent">Hi, my name is</Typography>
         <div>
@@ -25,9 +30,15 @@ const Intro = () => {
         <Typography color="secondary">
           Because if the cover does not impress you, what else can?
         </Typography>
+        <SocialLinks />
+        <Button>Download my CV</Button>
       </StyledTextWrapper>
-      <SocialLinks />
-      <Button>Download my CV</Button>
+      <StyledPictureWrapper>
+        <StyledRotatingLogo src={PortfolioLogo} />
+        <StyledRectangle src={RectBelow} below />
+        <StyledRectangle src={RectAbove} />
+        <StyledProfilePicture src={ProfilePicture} />
+      </StyledPictureWrapper>
     </StyledIntroWrapper>
   );
 };

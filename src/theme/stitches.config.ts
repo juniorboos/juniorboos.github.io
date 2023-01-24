@@ -54,7 +54,7 @@ export const { styled, css } = createStitches({
     sizes: {
       "vertical-line": "8rem",
       section: "100vh",
-      "logo-l": "20rem",
+      "logo-l": "5rem",
     },
     borderWidths: {
       px: "1px",
