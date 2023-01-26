@@ -4,7 +4,7 @@ const HorizontalLine = styled("div", {
   borderTopWidth: "$line",
   borderTopStyle: "$solid",
   borderColor: "$textSecondary",
-  width: "50%",
+  flexGrow: 1,
 });
 
 export { HorizontalLine };

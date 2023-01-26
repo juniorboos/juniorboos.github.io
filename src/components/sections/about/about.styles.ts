@@ -8,8 +8,6 @@ const StyledAboutWrapper = styled("section", {
   gap: "$8",
   minHeight: "$section",
   position: "relative",
-
-  "@bp1": {},
 });
 
 const StyledContentWrapper = styled("div", {
@@ -39,6 +37,7 @@ const StyledTextWrapper = styled("div", {
 const StyledPicture = styled("img", {
   width: 360,
   maxWidth: "100%",
+  marginBottom: "$6",
   borderRadius: "$2",
   borderWidth: "calc(2 * $px)",
   borderStyle: "$solid",

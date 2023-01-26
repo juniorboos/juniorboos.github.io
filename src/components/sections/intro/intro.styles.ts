@@ -1,10 +1,10 @@
+import { Button } from "~atoms/button";
 import { styled, keyframes } from "~stitches";
 
 const StyledIntroWrapper = styled("section", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  gap: "$8",
   minHeight: "$section",
   position: "relative",
 

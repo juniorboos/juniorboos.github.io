@@ -3,6 +3,7 @@ import { AppWrapper } from "./App.styles";
 import { globalStyles } from "~theme/global-styles";
 import { About } from "~sections/about";
 import { Intro } from "~sections/intro";
+import { Professional } from "~sections/professional";
 
 const App = () => {
   globalStyles();
@@ -11,6 +12,7 @@ const App = () => {
       <Header />
       <Intro />
       <About />
+      <Professional />
     </AppWrapper>
   );
 };
