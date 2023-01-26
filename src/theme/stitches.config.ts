@@ -2,9 +2,10 @@ import { createStitches } from "@stitches/react";
 export * from "@stitches/react";
 export const { styled, css } = createStitches({
   media: {
-    bp1: "(min-width: 768px)",
-    bp2: "(min-width: 1024px)",
-    bp3: "(min-width: 1440px)",
+    bp1: "(min-width: 576px)",
+    bp2: "(min-width: 768px)",
+    bp3: "(min-width: 992px)",
+    bp4: "(min-width: 1200px)",
   },
   theme: {
     colors: {
@@ -70,6 +71,7 @@ export const { styled, css } = createStitches({
     shadows: {
       primary: "#E964FF",
       background: "#020C1B",
+      header: "0 0 5px 5px rgba(0, 0, 0, 0.2)",
     },
     zIndices: {
       maximum: 9999,
