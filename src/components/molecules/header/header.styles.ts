@@ -9,7 +9,7 @@ const StyledHeader = styled("header", {
   backgroundColor: "$background",
   boxShadow: "$header",
 
-  transition: "all 0.3s",
+  transition: "$default",
 
   position: "fixed",
   top: 0,
@@ -104,7 +104,7 @@ const NavListItem = styled("li", {
     fontSize: 13,
     fontWeight: "bold",
     margin: "0 $3",
-    transition: "all 0.3s",
+    transition: "$default",
     textDecoration: "none",
   },
 

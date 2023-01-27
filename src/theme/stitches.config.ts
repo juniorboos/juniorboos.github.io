@@ -76,6 +76,8 @@ export const { styled, css } = createStitches({
     zIndices: {
       maximum: 9999,
     },
-    transitions: {},
+    transitions: {
+      default: "all 0.3s",
+    },
   },
 });
