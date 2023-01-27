@@ -1,6 +1,6 @@
 import { styled } from "~stitches";
 
-const StyledHeader = styled("header", {
+const StyledHeader = styled("nav", {
   display: "flex",
   flexWrap: "wrap",
   alignItems: "center",

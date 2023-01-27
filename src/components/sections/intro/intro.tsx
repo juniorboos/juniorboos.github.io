@@ -20,7 +20,7 @@ const Intro = () => {
       <StyledTextWrapper>
         <Typography color="accent">Hi, my name is</Typography>
         <div>
-          <Typography size="xl" weight="bold">
+          <Typography size="xl" weight="bold" as="h1">
             Milton Boos Junior.
           </Typography>
           <Typography size="xl" color="secondary" weight="bold">

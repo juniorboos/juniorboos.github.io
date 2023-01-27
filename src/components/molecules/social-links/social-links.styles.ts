@@ -5,19 +5,18 @@ const SocialLinksWrapper = styled("div", {
   gap: "$4",
   alignItems: "center",
   color: "$textSecondary",
+  alignSelf: "center",
 
   "& svg": {
     cursor: "pointer",
     "&:hover": {
       transform: "scale(1.1)",
+      fill: "$textPrimary",
     },
   },
 
   "@bp1": {
-    flexDirection: "column",
-    position: "absolute",
-    left: "-$14",
-    top: "50%",
+    alignSelf: "auto",
   },
 });
 

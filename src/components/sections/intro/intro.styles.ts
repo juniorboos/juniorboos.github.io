@@ -1,7 +1,7 @@
 import { Button } from "~atoms/button";
 import { styled, keyframes } from "~stitches";
 
-const StyledIntroWrapper = styled("section", {
+const StyledIntroWrapper = styled("header", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
@@ -24,6 +24,10 @@ const StyledTextWrapper = styled("div", {
 
   "& button": {
     marginTop: "$8",
+    alignSelf: "center",
+    "@bp1": {
+      alignSelf: "auto",
+    },
   },
 
   "@bp2": {

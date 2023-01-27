@@ -2,23 +2,33 @@ import { styled } from "~stitches";
 
 const AppWrapper = styled("div", {
   backgroundColor: "$background",
-  padding: "0 $8",
 
   display: "flex",
   flexDirection: "column",
+  alignItems: "center",
   gap: "$12",
   overflowX: "hidden",
 
-  "@bp1": {
-    padding: "0 $15",
-  },
+  padding: "0 1rem",
 
-  "@bp2": {
-    padding: "0 $15",
-  },
+  "& :is(header, section)": {
+    width: "100%",
 
-  "@bp3": {
-    padding: "0 $18",
+    "@bp1": {
+      maxWidth: 540,
+    },
+
+    "@bp2": {
+      maxWidth: 720,
+    },
+
+    "@bp3": {
+      maxWidth: 960,
+    },
+
+    "@bp4": {
+      maxWidth: 1140,
+    },
   },
 });
 

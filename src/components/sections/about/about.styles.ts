@@ -12,12 +12,12 @@ const StyledAboutWrapper = styled("section", {
 
 const StyledContentWrapper = styled("div", {
   display: "flex",
-  flexDirection: "column",
+  flexDirection: "column-reverse",
   justifyContent: "center",
   alignItems: "center",
   gap: "$8",
 
-  "@bp2": {
+  "@bp3": {
     flexDirection: "row",
   },
 });
@@ -38,6 +38,7 @@ const StyledPicture = styled("img", {
   width: 360,
   maxWidth: "100%",
   marginBottom: "$6",
+  marginRight: 12,
   borderRadius: "$2",
   borderWidth: "calc(2 * $px)",
   borderStyle: "$solid",

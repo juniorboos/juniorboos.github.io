@@ -10,6 +10,7 @@ const Button = styled("button", {
   padding: "$3 $10",
   cursor: "pointer",
   fontSize: "$m",
+  backgroundColor: "$background",
 
   "&:hover": {
     backgroundColor: "$primary",
