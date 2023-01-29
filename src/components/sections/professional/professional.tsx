@@ -1,8 +1,11 @@
+import { MdDoubleArrow } from "react-icons/md";
 import { SectionTitle } from "~atoms/section-title";
 import { Typography } from "~atoms/typography";
 import {
   CompaniesList,
   CompanyListItem,
+  JobDescription,
+  JobDescriptionSkills,
   StyledContent,
   StyledProfessional,
 } from "./professional.styles";
@@ -18,32 +21,37 @@ const Professional = () => {
           <CompanyListItem>Glartek</CompanyListItem>
           <CompanyListItem>Freelancing</CompanyListItem>
         </CompaniesList>
-        <div>
-          <Typography>
+        <JobDescription>
+          <Typography size="l" weight="bold">
             Javascript Engineer <span>@xgeeks</span>
           </Typography>
-          <Typography>Aug 2021 - Present</Typography>
-          <ul>
+          <Typography weight="bold">Aug 2021 - Present</Typography>
+          <JobDescriptionSkills>
             <li>
+              <MdDoubleArrow />
+              <Typography>
+                Write modern, performant, maintainable code for a diverse array
+                of client and internal projects Write modern, performant,
+                maintainable code for a diverse array of client and internal
+                projects
+              </Typography>
+            </li>
+            <li>
+              <MdDoubleArrow />
               <Typography>
                 Write modern, performant, maintainable code for a diverse array
                 of client and internal projects
               </Typography>
             </li>
             <li>
+              <MdDoubleArrow />
               <Typography>
                 Write modern, performant, maintainable code for a diverse array
                 of client and internal projects
               </Typography>
             </li>
-            <li>
-              <Typography>
-                Write modern, performant, maintainable code for a diverse array
-                of client and internal projects
-              </Typography>
-            </li>
-          </ul>
-        </div>
+          </JobDescriptionSkills>
+        </JobDescription>
       </StyledContent>
     </StyledProfessional>
   );

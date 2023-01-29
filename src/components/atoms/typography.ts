@@ -4,6 +4,11 @@ const Typography = styled("p", {
   color: "$textPrimary",
   fontSize: "$m",
 
+  "& span": {
+    color: "$textAccent",
+    fontWeight: "$bold",
+  },
+
   variants: {
     color: {
       primary: { color: "$textPrimary" },
