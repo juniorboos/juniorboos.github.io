@@ -6,7 +6,6 @@ const StyledAboutWrapper = styled("section", {
   justifyContent: "center",
   alignItems: "center",
   gap: "$8",
-  minHeight: "$section",
   position: "relative",
 });
 

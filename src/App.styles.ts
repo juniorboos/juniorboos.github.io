@@ -13,6 +13,7 @@ const AppWrapper = styled("div", {
 
   "& :is(header, section)": {
     width: "100%",
+    minHeight: "$section",
 
     "@bp1": {
       maxWidth: 540,

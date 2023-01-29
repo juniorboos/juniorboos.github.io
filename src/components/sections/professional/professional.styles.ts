@@ -6,10 +6,9 @@ const StyledProfessional = styled("section", {
   justifyContent: "center",
   alignItems: "center",
   gap: "$8",
-  minHeight: "$section",
 });
 
-const StyledContent = styled("section", {
+const StyledContent = styled("div", {
   display: "flex",
   flexDirection: "column",
   maxWidth: "100%",

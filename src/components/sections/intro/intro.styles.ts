@@ -5,7 +5,6 @@ const StyledIntroWrapper = styled("header", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  minHeight: "$section",
   position: "relative",
 
   "@bp1": {
