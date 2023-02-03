@@ -6,6 +6,7 @@ import { Intro } from "~sections/intro";
 import { Professional } from "~sections/professional";
 import { Projects } from "~sections/projects";
 import { Articles } from "~sections/articles";
+import { Contact } from "~sections/contact";
 
 const App = () => {
   globalStyles();
@@ -17,6 +18,7 @@ const App = () => {
       <Professional />
       <Projects />
       <Articles />
+      <Contact />
     </AppWrapper>
   );
 };

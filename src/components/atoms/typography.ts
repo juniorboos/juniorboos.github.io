@@ -4,6 +4,7 @@ const Typography = styled("p", {
   color: "$textPrimary",
   fontSize: "$m",
   textDecoration: "none",
+  wordBreak: "break-word",
 
   "& span": {
     color: "$textAccent",
@@ -15,6 +16,7 @@ const Typography = styled("p", {
       primary: { color: "$textPrimary" },
       secondary: { color: "$textSecondary" },
       accent: { color: "$textAccent" },
+      contrast: { color: "$textContrast" },
     },
     size: {
       s: { fontSize: "$s" },

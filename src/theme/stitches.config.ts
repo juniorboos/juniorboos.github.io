@@ -84,6 +84,7 @@ export const { styled, css } = createStitches({
     },
     transitions: {
       default: "all 0.3s",
+      button: "all 0.1s",
     },
   },
 });

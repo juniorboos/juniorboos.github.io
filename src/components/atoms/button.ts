@@ -1,21 +1,44 @@
 import { styled } from "~stitches";
 
 const Button = styled("button", {
-  background: "none",
-  borderWidth: "$px",
-  borderStyle: "$solid",
-  borderColor: "$primary",
   borderRadius: "$2",
-  color: "$textAccent",
   padding: "$3 $10",
   cursor: "pointer",
   fontSize: "$m",
-  backgroundColor: "$background",
+  transition: "$button",
 
   "&:hover": {
-    backgroundColor: "$primary",
-    color: "$textContrast",
     fontWeight: "$bold",
+  },
+
+  variants: {
+    variant: {
+      primary: {
+        backgroundColor: "$background",
+        borderColor: "$primary",
+        borderWidth: "$px",
+        borderStyle: "$solid",
+        color: "$textAccent",
+
+        "&:hover": {
+          backgroundColor: "$primary",
+          color: "$textContrast",
+        },
+      },
+      secondary: {
+        backgroundColor: "$backgroundAccent",
+        border: "none",
+        color: "$textPrimary",
+
+        "&:hover": {
+          backgroundColor: "$backgroundSecondary",
+        },
+      },
+    },
+  },
+
+  defaultVariants: {
+    variant: "primary",
   },
 });
 
