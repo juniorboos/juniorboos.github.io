@@ -11,6 +11,7 @@ const StyledRow = styled("div", {
   display: "flex",
   flexWrap: "wrap",
   gap: "$4",
+  marginBottom: "$4",
 
   "@bp1": {
     flexWrap: "nowrap",
@@ -32,7 +33,7 @@ const StyledColumn = styled("div", {
 });
 
 const StyledOverlay = styled("div", {
-  background: "rgba(255, 122, 87, 1)",
+  background: "$backgroundAccent",
   position: "absolute",
   left: 0,
   top: 0,
@@ -45,13 +46,13 @@ const StyledOverlay = styled("div", {
 
   padding: "$4",
 
-  color: "#fff",
+  color: "$textPrimary",
 
   "& a": {
     textDecoration: "none",
 
     "&:hover, svg": {
-      fill: "#FFF",
+      fill: "$textPrimary",
     },
   },
 });
@@ -63,7 +64,7 @@ const StyledCard = styled("div", {
   display: "block",
   color: "$textPrimary",
   padding: "$4",
-  backgroundColor: "#171826",
+  backgroundColor: "$backgroundTertiary",
 
   "&:hover": {
     [`& ${StyledOverlay}`]: {
