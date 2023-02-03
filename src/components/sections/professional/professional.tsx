@@ -22,7 +22,7 @@ const Professional = () => {
           <CompanyListItem>Freelancing</CompanyListItem>
         </CompaniesList>
         <JobDescription>
-          <Typography size="l" weight="bold">
+          <Typography size="xl" weight="bold">
             Javascript Engineer <span>@xgeeks</span>
           </Typography>
           <Typography weight="bold">Aug 2021 - Present</Typography>

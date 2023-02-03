@@ -3,6 +3,7 @@ import { styled } from "~stitches";
 const Typography = styled("p", {
   color: "$textPrimary",
   fontSize: "$m",
+  textDecoration: "none",
 
   "& span": {
     color: "$textAccent",
@@ -19,11 +20,12 @@ const Typography = styled("p", {
       s: { fontSize: "$s" },
       m: { fontSize: "$m" },
       l: { fontSize: "$l" },
-      xl: {
-        fontSize: "$l",
+      xl: { fontSize: "$xl" },
+      xxl: {
+        fontSize: "$xl",
 
         "@bp1": {
-          padding: "$xl",
+          padding: "$xxl",
         },
       },
     },

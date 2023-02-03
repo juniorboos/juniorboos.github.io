@@ -16,7 +16,7 @@ interface SectionTitleProps {
 
 const SectionTitle = ({ name }: SectionTitleProps) => (
   <StyledSectionTitle>
-    <Typography size="l" as="h2">
+    <Typography size="xl" as="h2">
       {name}
     </Typography>
     <HorizontalLine />

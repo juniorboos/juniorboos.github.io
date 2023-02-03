@@ -44,8 +44,9 @@ export const { styled, css } = createStitches({
     fontSizes: {
       s: "0.75rem",
       m: "1rem",
-      l: "2rem",
-      xl: "3rem",
+      l: "1.25rem",
+      xl: "2rem",
+      xxl: "3rem",
     },
     fonts: {
       poppins: "Poppins, apple-system, sans-serif",
