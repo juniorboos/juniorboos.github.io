@@ -27,29 +27,15 @@ const Professional = () => {
           </Typography>
           <Typography weight="bold">Aug 2021 - Present</Typography>
           <JobDescriptionSkills>
-            <li>
-              <MdDoubleArrow />
-              <Typography>
-                Write modern, performant, maintainable code for a diverse array
-                of client and internal projects Write modern, performant,
-                maintainable code for a diverse array of client and internal
-                projects
-              </Typography>
-            </li>
-            <li>
-              <MdDoubleArrow />
-              <Typography>
-                Write modern, performant, maintainable code for a diverse array
-                of client and internal projects
-              </Typography>
-            </li>
-            <li>
-              <MdDoubleArrow />
-              <Typography>
-                Write modern, performant, maintainable code for a diverse array
-                of client and internal projects
-              </Typography>
-            </li>
+            {[...Array(3)].map((_, idx) => (
+              <li key={idx}>
+                <MdDoubleArrow />
+                <Typography>
+                  Write modern, performant, maintainable code for a diverse
+                  array of client and internal projects
+                </Typography>
+              </li>
+            ))}
           </JobDescriptionSkills>
         </JobDescription>
       </StyledContent>

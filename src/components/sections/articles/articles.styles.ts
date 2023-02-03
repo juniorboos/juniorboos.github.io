@@ -39,8 +39,10 @@ const ArticleCard = styled("div", {
 });
 
 const ArticleInfo = styled("div", {
-  flex: "1 1 auto",
+  display: "flex",
+  flexDirection: "column",
   padding: "$5",
+  gap: "$2",
 });
 
 const ArticleMeta = styled("div", {
