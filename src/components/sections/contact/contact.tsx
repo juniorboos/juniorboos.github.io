@@ -17,12 +17,12 @@ const Contact = () => {
       <StyledCard>
         <FormWrapper>
           <Typography weight="bold" size="l" color="contrast">
-            Get In Touch
+            Get In Touch!
           </Typography>
           <form action="">
             <input
               type="email"
-              placeholder="Enter email"
+              placeholder="Enter your email"
               aria-describedby="emailHelp"
               required
             />
@@ -46,7 +46,7 @@ const Contact = () => {
                 Location
               </Typography>
               <Typography color="contrast">
-                12345 Fake ST NoWhere AB Country
+                Leiria, Portugal, 2410-170
               </Typography>
             </div>
           </ContactInfoItem>
@@ -56,7 +56,7 @@ const Contact = () => {
               <Typography size="m" color="contrast" weight="bold">
                 Phone Number
               </Typography>
-              <Typography color="contrast">(123) 456-7890</Typography>
+              <Typography color="contrast">(351) 913 020 410</Typography>
             </div>
           </ContactInfoItem>
           <ContactInfoItem>
@@ -65,7 +65,7 @@ const Contact = () => {
               <Typography size="m" color="contrast" weight="bold">
                 Email Address
               </Typography>
-              <Typography color="contrast">info@website.com</Typography>
+              <Typography color="contrast">miltonboosj@gmail.com</Typography>
             </div>
           </ContactInfoItem>
         </ContactInfo>

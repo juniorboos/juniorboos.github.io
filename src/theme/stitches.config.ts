@@ -13,11 +13,16 @@ export const { styled, css } = createStitches({
       textSecondary: "#B8A8D1",
       textAccent: "#E964FF",
       textContrast: "#000000",
+
       primary: "#E964FF",
+      neutral: "#CED4DA",
+
       background: "#020C1B",
       backgroundSecondary: "#0d1024",
       backgroundTertiary: "#171826",
+      backgroundLight: "#FFFFFF",
       backgroundAccent: "#503b8f",
+
       scrollThumb: "#37256b",
       scrollHover: "#503b8f",
     },
@@ -77,7 +82,7 @@ export const { styled, css } = createStitches({
     shadows: {
       primary: "#E964FF",
       background: "#020C1B",
-      header: "0 0 5px 5px rgba(0, 0, 0, 0.2)",
+      default: "0 0 5px 5px rgba(0, 0, 0, 0.2)",
     },
     zIndices: {
       maximum: 9999,

@@ -7,7 +7,7 @@ const StyledHeader = styled("nav", {
   justifyContent: "space-between",
   padding: 0,
   backgroundColor: "$background",
-  boxShadow: "$header",
+  boxShadow: "$default",
 
   transition: "$default",
 

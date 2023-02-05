@@ -10,12 +10,12 @@ const StyledContact = styled("section", {
 const StyledCard = styled("div", {
   position: "relative",
   borderRadius: "$1",
-  boxShadow: "1px 2px 6px rgba(173, 181, 189, 0.5)",
+  boxShadow: "$default",
   maxWidth: "100%",
   display: "flex",
   margin: "0 auto",
   zIndex: 99,
-  background: "#FFF",
+  background: "$backgroundLight",
 
   "@bp2": {
     width: "fit-content",
@@ -42,8 +42,8 @@ const FormWrapper = styled("div", {
 
     "& input, textarea": {
       color: "$textConstrast",
-      backgroundColor: "#FFF",
-      border: "1px solid #ced4da",
+      backgroundColor: "$backgroundLight",
+      border: "1px solid $neutral",
       borderRadius: "$1",
       transition: "$default",
       padding: "$3",
@@ -62,7 +62,7 @@ const ContactInfo = styled("div", {
   minWidth: 350,
   padding: "$8",
   gap: "$6",
-  borderLeft: "1px solid #dee2e6",
+  borderLeft: "1px solid $neutral",
 
   "@bp2": {
     display: "flex",
@@ -74,11 +74,10 @@ const ContactInfoItem = styled("div", {
   display: "flex",
   alignItems: "center",
   flexWrap: "nowrap",
-  gap: "$3",
+  gap: "$4",
 
   "& svg": {
-    width: 40,
-    fontSize: 16,
+    fontSize: "$m",
     color: "$primary",
   },
 
