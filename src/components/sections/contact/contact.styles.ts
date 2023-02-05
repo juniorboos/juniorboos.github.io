@@ -1,6 +1,7 @@
 import { styled } from "~stitches";
 
 const StyledContact = styled("section", {
+  position: "relative",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -8,7 +9,6 @@ const StyledContact = styled("section", {
 });
 
 const StyledCard = styled("div", {
-  position: "relative",
   borderRadius: "$1",
   boxShadow: "$default",
   maxWidth: "100%",
@@ -86,12 +86,28 @@ const ContactInfoItem = styled("div", {
   },
 });
 
-const BackgroundImage = styled("img", {
+const WavesSvgWrapper = styled("div", {
   position: "absolute",
   bottom: 0,
-  left: 0,
+  left: "50%",
+  transform: "translateX(-50%) rotate(180deg)",
+  margin: 0,
+  minWidth: 960,
+  width: "100vw",
+  overflow: "hidden",
+  lineHeight: 0,
+});
+
+const WavesSvg = styled("svg", {
+  position: "relative",
+  display: "block",
   width: "100%",
-  height: "50%",
+  height: 120,
+  transform: "rotateY(180deg)",
+
+  "& path": {
+    fill: "$primary",
+  },
 });
 
 export {
@@ -100,5 +116,6 @@ export {
   FormWrapper,
   ContactInfo,
   ContactInfoItem,
-  BackgroundImage,
+  WavesSvgWrapper,
+  WavesSvg,
 };
