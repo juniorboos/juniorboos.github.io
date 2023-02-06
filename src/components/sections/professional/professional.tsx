@@ -12,13 +12,14 @@ import {
 
 import ProfessionalContent from "../../../content/professional";
 import { useState } from "react";
+import { SectionProps } from "types";
 
-const Professional = () => {
+const Professional = (props: SectionProps) => {
   const { title, companies } = ProfessionalContent;
   const [selectedCompany, setSelectedCompany] = useState(companies[0]);
 
   return (
-    <StyledProfessional>
+    <StyledProfessional {...props}>
       <SectionTitle name={title} />
       <StyledContent>
         <CompaniesList>

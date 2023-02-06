@@ -13,8 +13,9 @@ import {
 } from "./contact.styles";
 import ContactContent from "../../../content/contact";
 import { FormEvent, useState } from "react";
+import { SectionProps } from "types";
 
-const Contact = () => {
+const Contact = (props: SectionProps) => {
   const { title, form, location, phone, email } = ContactContent;
 
   const [formFields, setFormFields] = useState({
@@ -52,7 +53,7 @@ const Contact = () => {
   };
 
   return (
-    <StyledContact>
+    <StyledContact {...props}>
       <StyledCard>
         <FormWrapper>
           <Typography weight="bold" size="l">

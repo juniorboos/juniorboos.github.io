@@ -8,15 +8,16 @@ import {
   StyledArticles,
 } from "./articles.styles";
 import ArticlesContent from "../../../content/articles";
+import { SectionProps } from "types";
 
-const Articles = () => {
+const Articles = (props: SectionProps) => {
   const { title, articles } = ArticlesContent;
   return (
-    <StyledArticles>
+    <StyledArticles {...props}>
       <SectionTitle name={title} />
       <ArticlesList>
-        {articles.map((article) => (
-          <ArticleCard key={article.title}>
+        {articles.map((article, idx) => (
+          <ArticleCard key={`${article.title}-${idx}`}>
             <img src={article.imgUrl} />
             <ArticleInfo>
               <Typography weight="bold">{article.title}</Typography>

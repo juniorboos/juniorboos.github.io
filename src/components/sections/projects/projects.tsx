@@ -15,12 +15,17 @@ import { IconType } from "react-icons/lib";
 import { SiGithub } from "react-icons/si";
 import { Typography } from "~atoms/typography";
 import Anchor from "~atoms/anchor";
+import { SectionProps } from "types";
 
 interface Project {
   name: string;
   description: string;
   url: string;
-  technologies: { Icon: IconType; name: string }[];
+  technologies: {
+    Icon: IconType;
+    name: string;
+    url: string;
+  }[];
 }
 
 interface ProjectCardProps {
@@ -40,9 +45,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => (
         </Anchor>
       </TitleWrapper>
       <TechnologiesList>
-        {project.technologies.map(({ Icon, name }) => (
+        {project.technologies.map(({ Icon, name, url }, idx) => (
           <Anchor
-            href=""
+            href={url}
             aria-label={name}
             target="_blank"
             key={`${project.name}-${name}`}
@@ -55,16 +60,16 @@ const ProjectCard = ({ project }: ProjectCardProps) => (
   </StyledCard>
 );
 
-const Projects = () => {
+const Projects = (props: SectionProps) => {
   const { title, projects } = ProjectsContent;
   return (
-    <StyledProjects>
+    <StyledProjects {...props}>
       <SectionTitle name={title} />
       <StyledRow>
-        {projects.map((column) => (
-          <StyledColumn>
+        {projects.map((column, idx) => (
+          <StyledColumn key={`project-column-${idx}`}>
             {column.map((project) => (
-              <ProjectCard project={project} />
+              <ProjectCard project={project} key={project.name} />
             ))}
           </StyledColumn>
         ))}

@@ -5,6 +5,8 @@ const Typography = styled("p", {
   fontSize: "$m",
   textDecoration: "none",
   wordBreak: "break-word",
+  background: "none",
+  border: "none",
 
   "& span": {
     color: "$textAccent",

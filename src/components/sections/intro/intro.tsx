@@ -14,12 +14,13 @@ import RectAbove from "../../../assets/images/rect-above.svg";
 import RectBelow from "../../../assets/images/rect-below.svg";
 import { SocialMedia } from "~molecules/social-links";
 import IntroContent from "../../../content/intro";
+import { SectionProps } from "types";
 
-const Intro = () => {
+const Intro = (props: SectionProps) => {
   const { pretitle, title, subtitle, description, social_media, cv } =
     IntroContent;
   return (
-    <StyledIntroWrapper>
+    <StyledIntroWrapper {...props}>
       <StyledTextWrapper>
         <Typography color="accent">{pretitle}</Typography>
         <div>

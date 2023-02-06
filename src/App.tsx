@@ -13,12 +13,12 @@ const App = () => {
   return (
     <AppWrapper>
       <Header />
-      <Intro />
-      <About />
-      <Professional />
-      <Projects />
-      <Articles />
-      <Contact />
+      <Intro id="intro-section" />
+      <About id="about-section" />
+      <Professional id="professional-section" />
+      <Projects id="projects-section" />
+      <Articles id="articles-section" />
+      <Contact id="contact-section" />
     </AppWrapper>
   );
 };

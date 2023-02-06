@@ -80,7 +80,7 @@ export default {
           {
             Icon: SiReact,
             name: "React Native",
-            url: "https://reactjs.org",
+            url: "https://reactnative.dev",
           },
           {
             Icon: SiFirebase,
@@ -165,6 +165,12 @@ export default {
           {
             Icon: SiReact,
             name: "React",
+            url: "https://reactjs.org",
+          },
+          {
+            Icon: SiCss3,
+            name: "CSS",
+            url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
           },
           {
             Icon: SiFirebase,
@@ -182,14 +188,17 @@ export default {
           {
             Icon: SiReact,
             name: "React Native",
+            url: "https://reactnative.dev",
           },
           {
-            Icon: SiStyledcomponents,
-            name: "Styled Components",
+            Icon: SiFirebase,
+            name: "Firebase",
+            url: "https://firebase.google.com",
           },
           {
-            Icon: SiApollographql,
-            name: "Apollo GraphQL",
+            Icon: SiFigma,
+            name: "Figma",
+            url: "https://www.figma.com",
           },
         ],
       },

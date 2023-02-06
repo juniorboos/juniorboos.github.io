@@ -11,23 +11,23 @@ export default {
   nav: [
     {
       name: "About",
-      url: "/",
+      id: "about-section",
     },
     {
       name: "Experience",
-      url: "/",
+      id: "professional-section",
     },
     {
       name: "Projects",
-      url: "/",
+      id: "projects-section",
     },
     {
       name: "Articles",
-      url: "/",
+      id: "articles-section",
     },
     {
       name: "Contact",
-      url: "/",
+      id: "contact-section",
     },
   ],
 };

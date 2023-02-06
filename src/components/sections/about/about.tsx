@@ -7,12 +7,13 @@ import {
 } from "./about.styles";
 import { SectionTitle } from "~atoms/section-title";
 import AboutContent from "../../../content/about";
+import { SectionProps } from "types";
 
-const About = () => {
+const About = (props: SectionProps) => {
   const { description, profilePicture, skills, title } = AboutContent;
 
   return (
-    <StyledAboutWrapper>
+    <StyledAboutWrapper {...props}>
       <SectionTitle name={title} />
       <StyledContentWrapper>
         <StyledTextWrapper>

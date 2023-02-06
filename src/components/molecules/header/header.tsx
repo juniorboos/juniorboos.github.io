@@ -10,6 +10,7 @@ import {
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import NavbarContent from "../../../content/navbar";
+import { scrollIntoView } from "../../../hooks/scrollIntoView";
 
 const Header = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -33,7 +34,10 @@ const Header = () => {
         <NavList>
           {nav.map((navItem) => (
             <NavListItem key={navItem.name}>
-              <Typography as="a" href={navItem.url}>
+              <Typography
+                as="button"
+                onClick={() => scrollIntoView(navItem.id)}
+              >
                 {navItem.name}
               </Typography>
             </NavListItem>
