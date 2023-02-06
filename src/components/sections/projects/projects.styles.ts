@@ -68,7 +68,8 @@ const StyledCard = styled("div", {
   position: "relative",
   borderRadius: "$1",
   overflow: "hidden",
-  display: "block",
+  display: "flex",
+  flexDirection: "column",
   padding: "$4",
   backgroundColor: "$backgroundTertiary",
 
@@ -105,6 +106,14 @@ const TitleWrapper = styled("div", {
   gap: "$2",
 });
 
+const HorizontalLine = styled("hr", {
+  width: "90%",
+  borderColor: "$neutral",
+  opacity: "10%",
+  alignSelf: "center",
+  marginBottom: "$2",
+});
+
 export {
   StyledProjects,
   StyledRow,
@@ -113,4 +122,5 @@ export {
   StyledOverlay,
   TechnologiesList,
   TitleWrapper,
+  HorizontalLine,
 };

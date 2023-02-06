@@ -12,11 +12,44 @@ import {
   WavesSvgWrapper,
 } from "./contact.styles";
 import ContactContent from "../../../content/contact";
+import { FormEvent, useState } from "react";
 
 const Contact = () => {
   const { title, form, location, phone, email } = ContactContent;
 
-  const onSubmit = () => {};
+  const [formFields, setFormFields] = useState({
+    email: "",
+    message: "",
+  });
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const {
+    VITE_GOOGLE_FORM_MESSAGE_ID,
+    VITE_GOOGLE_FORM_EMAIL_ID,
+    VITE_GOOGLE_FORM_ACTION_URL,
+  } = import.meta.env;
+
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("submiting...");
+    const formData = new FormData();
+    formData.append(VITE_GOOGLE_FORM_MESSAGE_ID, formFields.message);
+    formData.append(VITE_GOOGLE_FORM_EMAIL_ID, formFields.email);
+
+    setIsLoading(true);
+
+    fetch(VITE_GOOGLE_FORM_ACTION_URL, { method: "post", body: formData })
+      .then((res) => {
+        console.log("res: ", res);
+        alert("Message sent!");
+      })
+      .catch((error) => alert(error))
+      .finally(() => {
+        setFormFields({ email: "", message: "" });
+        setIsLoading(false);
+      });
+  };
 
   return (
     <StyledContact>
@@ -26,14 +59,32 @@ const Contact = () => {
             {title}
           </Typography>
           <form onSubmit={onSubmit}>
-            <input type="email" placeholder={form.emailPlaceholder} required />
+            <input
+              type="email"
+              placeholder={form.emailPlaceholder}
+              required
+              value={formFields.email}
+              onChange={(e) =>
+                setFormFields((formFields) => ({
+                  ...formFields,
+                  email: e.target.value,
+                }))
+              }
+            />
             <textarea
               required
               cols={30}
               rows={6}
               placeholder={form.messagePlaceholder}
+              value={formFields.message}
+              onChange={(e) =>
+                setFormFields((formFields) => ({
+                  ...formFields,
+                  message: e.target.value,
+                }))
+              }
             />
-            <Button type="submit" variant="secondary">
+            <Button type="submit" variant="secondary" disabled={isLoading}>
               {form.button}
             </Button>
           </form>

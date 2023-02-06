@@ -1,6 +1,7 @@
 import { BsGithub } from "react-icons/bs";
 import { SectionTitle } from "~atoms/section-title";
 import {
+  HorizontalLine,
   StyledCard,
   StyledColumn,
   StyledOverlay,
@@ -13,6 +14,7 @@ import ProjectsContent from "../../../content/projects";
 import { IconType } from "react-icons/lib";
 import { SiGithub } from "react-icons/si";
 import { Typography } from "~atoms/typography";
+import Anchor from "~atoms/anchor";
 
 interface Project {
   name: string;
@@ -28,19 +30,25 @@ interface ProjectCardProps {
 const ProjectCard = ({ project }: ProjectCardProps) => (
   <StyledCard>
     <Typography weight="bold">{project.name}</Typography>
+    <HorizontalLine />
     <Typography>{project.description}</Typography>
     <StyledOverlay>
       <TitleWrapper>
-        <Typography>{project.name}</Typography>
-        <a href={project.url}>
+        <Typography weight="bold">{project.name}</Typography>
+        <Anchor href={project.url}>
           <SiGithub size="1.5rem" aria-hidden />
-        </a>
+        </Anchor>
       </TitleWrapper>
       <TechnologiesList>
         {project.technologies.map(({ Icon, name }) => (
-          <a href="" aria-label={name}>
+          <Anchor
+            href=""
+            aria-label={name}
+            target="_blank"
+            key={`${project.name}-${name}`}
+          >
             <Icon size="1.5rem" aria-hidden />
-          </a>
+          </Anchor>
         ))}
       </TechnologiesList>
     </StyledOverlay>
