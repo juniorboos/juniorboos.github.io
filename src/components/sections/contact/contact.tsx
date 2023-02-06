@@ -11,31 +11,30 @@ import {
   WavesSvg,
   WavesSvgWrapper,
 } from "./contact.styles";
+import ContactContent from "../../../content/contact";
 
 const Contact = () => {
+  const { title, form, location, phone, email } = ContactContent;
+
+  const onSubmit = () => {};
+
   return (
     <StyledContact>
       <StyledCard>
         <FormWrapper>
-          <Typography weight="bold" size="l" color="contrast">
-            Get In Touch!
+          <Typography weight="bold" size="l">
+            {title}
           </Typography>
-          <form action="">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              aria-describedby="emailHelp"
-              required
-            />
+          <form onSubmit={onSubmit}>
+            <input type="email" placeholder={form.emailPlaceholder} required />
             <textarea
-              name="contact-message"
-              id=""
+              required
               cols={30}
               rows={6}
-              placeholder="Message"
+              placeholder={form.messagePlaceholder}
             />
             <Button type="submit" variant="secondary">
-              Send Message
+              {form.button}
             </Button>
           </form>
         </FormWrapper>
@@ -43,37 +42,34 @@ const Contact = () => {
           <ContactInfoItem>
             <HiOutlineLocationMarker size={24} />
             <div>
-              <Typography size="m" color="contrast" weight="bold">
-                Location
+              <Typography size="m" weight="bold">
+                {location.label}
               </Typography>
-              <Typography color="contrast">
-                Leiria, Portugal, 2410-170
-              </Typography>
+              <Typography>{location.description}</Typography>
             </div>
           </ContactInfoItem>
           <ContactInfoItem>
             <AiOutlinePhone size={24} />
             <div>
-              <Typography size="m" color="contrast" weight="bold">
-                Phone Number
+              <Typography size="m" weight="bold">
+                {phone.label}
               </Typography>
-              <Typography color="contrast">+351 913 020 410</Typography>
+              <Typography>{phone.description}</Typography>
             </div>
           </ContactInfoItem>
           <ContactInfoItem>
             <AiOutlineMail size={24} />
             <div>
-              <Typography size="m" color="contrast" weight="bold">
-                Email Address
+              <Typography size="m" weight="bold">
+                {email.label}
               </Typography>
-              <Typography color="contrast">miltonboosj@gmail.com</Typography>
+              <Typography>{email.description}</Typography>
             </div>
           </ContactInfoItem>
         </ContactInfo>
       </StyledCard>
       <WavesSvgWrapper>
         <WavesSvg
-          data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"

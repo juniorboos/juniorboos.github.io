@@ -10,30 +10,38 @@ import {
   StyledProfessional,
 } from "./professional.styles";
 
+import ProfessionalContent from "../../../content/professional";
+import { useState } from "react";
+
 const Professional = () => {
+  const { title, companies } = ProfessionalContent;
+  const [selectedCompany, setSelectedCompany] = useState(companies[0]);
+
   return (
     <StyledProfessional>
-      <SectionTitle name="Where I have worked" />
+      <SectionTitle name={title} />
       <StyledContent>
         <CompaniesList>
-          <CompanyListItem active>xgeeks</CompanyListItem>
-          <CompanyListItem>Cazoo</CompanyListItem>
-          <CompanyListItem>Glartek</CompanyListItem>
-          <CompanyListItem>Freelancing</CompanyListItem>
+          {companies.map((company) => (
+            <CompanyListItem
+              key={company.name}
+              active={company.name === selectedCompany.name}
+              onClick={() => setSelectedCompany(company)}
+            >
+              {company.name}
+            </CompanyListItem>
+          ))}
         </CompaniesList>
         <JobDescription>
           <Typography size="xl" weight="bold">
-            Javascript Engineer <span>@xgeeks</span>
+            {selectedCompany.role} <span>@{selectedCompany.name}</span>
           </Typography>
-          <Typography weight="bold">Aug 2021 - Present</Typography>
+          <Typography weight="bold">{selectedCompany.period}</Typography>
           <JobDescriptionSkills>
-            {[...Array(3)].map((_, idx) => (
+            {selectedCompany.responsabilities.map((responsability, idx) => (
               <li key={idx}>
                 <MdDoubleArrow />
-                <Typography>
-                  Write modern, performant, maintainable code for a diverse
-                  array of client and internal projects
-                </Typography>
+                <Typography>{responsability}</Typography>
               </li>
             ))}
           </JobDescriptionSkills>

@@ -5,6 +5,7 @@ const Button = styled("button", {
   padding: "$3 $10",
   cursor: "pointer",
   fontSize: "$m",
+  textDecoration: "none",
   transition: "$button",
 
   "&:hover": {

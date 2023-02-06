@@ -7,30 +7,26 @@ import {
   ArticlesList,
   StyledArticles,
 } from "./articles.styles";
+import ArticlesContent from "../../../content/articles";
 
 const Articles = () => {
+  const { title, articles } = ArticlesContent;
   return (
     <StyledArticles>
-      <SectionTitle name="My articles" />
+      <SectionTitle name={title} />
       <ArticlesList>
-        {[...Array(3)].map((_, idx) => (
-          <ArticleCard key={idx}>
-            <img src="https://cdn-images-1.medium.com/max/800/1*kej2WmeUuzxtY37oqQc_5Q.png" />
+        {articles.map((article) => (
+          <ArticleCard key={article.title}>
+            <img src={article.imgUrl} />
             <ArticleInfo>
-              <Typography size="m">Article title very long</Typography>
+              <Typography weight="bold">{article.title}</Typography>
               <ArticleMeta>
                 <Typography size="s" as="a" href="#">
-                  Posted by: xgeeks
+                  Posted by: {article.postedBy}
                 </Typography>
-                {/* <a href="#">likes</a>
-                            <a href="#">comments</a> */}
               </ArticleMeta>
-              <Typography size="m">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad
-                vel dolorum, iusto velit, minima? Voluptas nemo harum impedit
-                nisi.
-              </Typography>
-              <Typography as="a" color="accent">
+              <Typography>{article.description}</Typography>
+              <Typography as="a" color="accent" href={article.url}>
                 Read More..
               </Typography>
             </ArticleInfo>

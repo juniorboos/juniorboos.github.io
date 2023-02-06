@@ -1,14 +1,26 @@
-import { BsInstagram, BsGithub, BsLinkedin } from "react-icons/bs";
-import { SocialLinksWrapper } from "./social-links.styles";
+import { IconType } from "react-icons/lib";
+import { SocialMediaWrapper } from "./social-links.styles";
 
-const SocialLinks = () => {
+interface Link {
+  Icon: IconType;
+  name: string;
+  url: string;
+}
+
+interface SocialMediaProps {
+  links: Link[];
+}
+
+const SocialMedia = ({ links }: SocialMediaProps) => {
   return (
-    <SocialLinksWrapper>
-      <BsInstagram size={"1.5rem"} />
-      <BsGithub size={"1.5rem"} />
-      <BsLinkedin size={"1.5rem"} />
-    </SocialLinksWrapper>
+    <SocialMediaWrapper>
+      {links.map(({ url, name, Icon }) => (
+        <a href={url} key={url} aria-label={`Link to ${name}`}>
+          <Icon size="1.5rem" aria-hidden />
+        </a>
+      ))}
+    </SocialMediaWrapper>
   );
 };
 
-export { SocialLinks };
+export { SocialMedia };

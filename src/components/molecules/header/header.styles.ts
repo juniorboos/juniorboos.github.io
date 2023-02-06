@@ -1,3 +1,4 @@
+import { Typography } from "~atoms/typography";
 import { styled } from "~stitches";
 
 const StyledHeader = styled("nav", {
@@ -98,7 +99,7 @@ const NavList = styled("ul", {
 const NavListItem = styled("li", {
   padding: 0,
 
-  "& a": {
+  [`& ${Typography}`]: {
     display: "block",
     padding: "$2 $4",
     fontSize: 13,
@@ -106,10 +107,14 @@ const NavListItem = styled("li", {
     margin: "0 $3",
     transition: "$default",
     textDecoration: "none",
+
+    "&:hover": {
+      color: "$textAccent",
+    },
   },
 
   "@bp1": {
-    "& a": {
+    [`& ${Typography}`]: {
       padding: "0 $2",
     },
   },

@@ -1,14 +1,14 @@
 import { styled } from "~stitches";
 
-const SocialLinksWrapper = styled("div", {
+const SocialMediaWrapper = styled("div", {
   display: "flex",
   gap: "$4",
   alignItems: "center",
-  color: "$textSecondary",
   alignSelf: "center",
 
-  "& svg": {
+  "& a > svg": {
     cursor: "pointer",
+    fill: "$textSecondary",
     "&:hover": {
       transform: "scale(1.1)",
       fill: "$textPrimary",
@@ -20,4 +20,4 @@ const SocialLinksWrapper = styled("div", {
   },
 });
 
-export { SocialLinksWrapper };
+export { SocialMediaWrapper };

@@ -21,7 +21,7 @@ const StyledTextWrapper = styled("div", {
   position: "relative",
   zIndex: 4,
 
-  "& button": {
+  [`& ${Button}`]: {
     marginTop: "$8",
     alignSelf: "center",
     "@bp1": {

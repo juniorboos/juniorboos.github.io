@@ -1,3 +1,4 @@
+import { Typography } from "~atoms/typography";
 import { styled } from "~stitches";
 
 const StyledContact = styled("section", {
@@ -16,6 +17,10 @@ const StyledCard = styled("div", {
   margin: "0 auto",
   zIndex: 99,
   background: "$backgroundLight",
+
+  [`& ${Typography}`]: {
+    color: "$textContrast",
+  },
 
   "@bp2": {
     width: "fit-content",

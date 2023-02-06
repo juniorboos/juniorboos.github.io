@@ -43,16 +43,23 @@ const StyledOverlay = styled("div", {
   visibility: "hidden",
   opacity: "0",
   transition: "$default",
+  display: "flex",
+  flexDirection: "column",
 
   padding: "$4",
+  gap: "$4",
 
   color: "$textPrimary",
 
   "& a": {
     textDecoration: "none",
 
-    "&:hover, svg": {
+    "& svg": {
       fill: "$textPrimary",
+    },
+
+    "&:hover > svg": {
+      fill: "$textSecondary",
     },
   },
 });
@@ -62,9 +69,12 @@ const StyledCard = styled("div", {
   borderRadius: "$1",
   overflow: "hidden",
   display: "block",
-  color: "$textPrimary",
   padding: "$4",
   backgroundColor: "$backgroundTertiary",
+
+  "& > :first-child": {
+    marginBottom: "$2",
+  },
 
   "&:hover": {
     [`& ${StyledOverlay}`]: {
@@ -75,4 +85,32 @@ const StyledCard = styled("div", {
   },
 });
 
-export { StyledProjects, StyledRow, StyledColumn, StyledCard, StyledOverlay };
+const TechnologiesList = styled("div", {
+  display: "flex",
+  flexWrap: "wrap",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "$3",
+  flexGrow: 1,
+
+  "@bp2": {
+    gap: "$4",
+  },
+});
+
+const TitleWrapper = styled("div", {
+  display: "flex",
+  justifyContent: "space-between",
+  flexWrap: "nowrap",
+  gap: "$2",
+});
+
+export {
+  StyledProjects,
+  StyledRow,
+  StyledColumn,
+  StyledCard,
+  StyledOverlay,
+  TechnologiesList,
+  TitleWrapper,
+};

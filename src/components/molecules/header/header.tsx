@@ -1,5 +1,4 @@
 import { Typography } from "~atoms/typography";
-import PortfolioLogo from "../../../assets/icons/portfolio-logo.svg";
 import {
   StyledNav,
   StyledHeader,
@@ -10,46 +9,35 @@ import {
 } from "./header.styles";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
+import NavbarContent from "../../../content/navbar";
 
 const Header = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const handleToggle = () => setIsExpanded((prevIsExpanded) => !prevIsExpanded);
 
+  const { logo, navToggle, nav } = NavbarContent;
+
   return (
     <StyledHeader>
       <NavLogo href="#">
-        <img src={PortfolioLogo} width={36} height={36} />
+        <img src={logo.imgUrl} width={36} height={36} />
       </NavLogo>
-      <NavToggler onClick={handleToggle}>
-        <GiHamburgerMenu
-          type="button"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        />
+      <NavToggler
+        onClick={handleToggle}
+        aria-expanded={isExpanded}
+        aria-label={navToggle.label}
+      >
+        <GiHamburgerMenu aria-hidden />
       </NavToggler>
       <StyledNav isExpanded={isExpanded}>
         <NavList>
-          <NavListItem>
-            <Typography as="a" href="/">
-              About
-            </Typography>
-          </NavListItem>
-          <NavListItem>
-            <Typography as="a" href="/">
-              Experience
-            </Typography>
-          </NavListItem>
-          <NavListItem>
-            <Typography as="a" href="/">
-              Work
-            </Typography>
-          </NavListItem>
-          <NavListItem>
-            <Typography as="a" href="/">
-              Contact
-            </Typography>
-          </NavListItem>
+          {nav.map((navItem) => (
+            <NavListItem key={navItem.name}>
+              <Typography as="a" href={navItem.url}>
+                {navItem.name}
+              </Typography>
+            </NavListItem>
+          ))}
         </NavList>
       </StyledNav>
     </StyledHeader>

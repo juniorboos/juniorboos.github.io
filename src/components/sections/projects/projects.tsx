@@ -1,4 +1,3 @@
-import React from "react";
 import { BsGithub } from "react-icons/bs";
 import { SectionTitle } from "~atoms/section-title";
 import {
@@ -7,42 +6,60 @@ import {
   StyledOverlay,
   StyledProjects,
   StyledRow,
+  TechnologiesList,
+  TitleWrapper,
 } from "./projects.styles";
+import ProjectsContent from "../../../content/projects";
+import { IconType } from "react-icons/lib";
+import { SiGithub } from "react-icons/si";
+import { Typography } from "~atoms/typography";
 
-const ProjectCard = ({ long = false }) => (
+interface Project {
+  name: string;
+  description: string;
+  url: string;
+  technologies: { Icon: IconType; name: string }[];
+}
+
+interface ProjectCardProps {
+  project: Project;
+}
+
+const ProjectCard = ({ project }: ProjectCardProps) => (
   <StyledCard>
-    <h4>Project Name</h4>
-    <p>
-      Project that was made using this, this and that for this purpose{" "}
-      {long &&
-        "Project that was made using this, this and that for this purpose"}
-    </p>
+    <Typography weight="bold">{project.name}</Typography>
+    <Typography>{project.description}</Typography>
     <StyledOverlay>
-      <h4>Project Title</h4>
-      <a href="">
-        <BsGithub />
-      </a>
+      <TitleWrapper>
+        <Typography>{project.name}</Typography>
+        <a href={project.url}>
+          <SiGithub size="1.5rem" aria-hidden />
+        </a>
+      </TitleWrapper>
+      <TechnologiesList>
+        {project.technologies.map(({ Icon, name }) => (
+          <a href="" aria-label={name}>
+            <Icon size="1.5rem" aria-hidden />
+          </a>
+        ))}
+      </TechnologiesList>
     </StyledOverlay>
   </StyledCard>
 );
 
 const Projects = () => {
+  const { title, projects } = ProjectsContent;
   return (
     <StyledProjects>
-      <SectionTitle name="Some things I've built" />
+      <SectionTitle name={title} />
       <StyledRow>
-        <StyledColumn>
-          <ProjectCard />
-          <ProjectCard long />
-        </StyledColumn>
-        <StyledColumn>
-          <ProjectCard long />
-          <ProjectCard />
-        </StyledColumn>
-        <StyledColumn>
-          <ProjectCard />
-          <ProjectCard long />
-        </StyledColumn>
+        {projects.map((column) => (
+          <StyledColumn>
+            {column.map((project) => (
+              <ProjectCard project={project} />
+            ))}
+          </StyledColumn>
+        ))}
       </StyledRow>
     </StyledProjects>
   );
