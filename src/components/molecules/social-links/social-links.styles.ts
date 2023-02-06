@@ -7,7 +7,6 @@ const SocialMediaWrapper = styled("div", {
   alignSelf: "center",
 
   "& a > svg": {
-    cursor: "pointer",
     fill: "$textSecondary",
     "&:hover": {
       transform: "scale(1.1)",

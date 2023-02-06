@@ -56,9 +56,8 @@ const CompanyListItem = styled("li", {
   variants: {
     active: {
       true: {
-        fontWeight: "$bold",
         color: "$textPrimary",
-        backgroundColor: "$primary",
+        backgroundColor: "$backgroundAccent",
       },
     },
   },

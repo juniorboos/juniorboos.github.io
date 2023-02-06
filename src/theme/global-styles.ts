@@ -25,6 +25,8 @@ const globalStyles = globalCss({
   "::-webkit-scrollbar-thumb:hover": {
     background: "$scrollHover",
   },
+
+  "a, button": { cursor: "pointer" },
 });
 
 export { globalStyles };

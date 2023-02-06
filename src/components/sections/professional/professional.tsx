@@ -34,7 +34,10 @@ const Professional = () => {
         </CompaniesList>
         <JobDescription>
           <Typography size="xl" weight="bold">
-            {selectedCompany.role} <span>@{selectedCompany.name}</span>
+            {selectedCompany.role}{" "}
+            <Typography size="xl" color="accent" as="a">
+              @{selectedCompany.name}
+            </Typography>
           </Typography>
           <Typography weight="bold">{selectedCompany.period}</Typography>
           <JobDescriptionSkills>
