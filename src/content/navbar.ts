@@ -21,10 +21,10 @@ export default {
       name: "Projects",
       id: "projects-section",
     },
-    {
-      name: "Articles",
-      id: "articles-section",
-    },
+    // {
+    //   name: "Articles",
+    //   id: "articles-section",
+    // },
     {
       name: "Contact",
       id: "contact-section",

@@ -5,7 +5,7 @@ import { About } from "~sections/about";
 import { Intro } from "~sections/intro";
 import { Professional } from "~sections/professional";
 import { Projects } from "~sections/projects";
-import { Articles } from "~sections/articles";
+// import { Articles } from "~sections/articles";
 import { Contact } from "~sections/contact";
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
       <About id="about-section" />
       <Professional id="professional-section" />
       <Projects id="projects-section" />
-      <Articles id="articles-section" />
+      {/* <Articles id="articles-section" /> */}
       <Contact id="contact-section" />
     </AppWrapper>
   );
