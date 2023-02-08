@@ -5,6 +5,15 @@ const HorizontalLine = styled("div", {
   borderTopStyle: "$solid",
   borderColor: "$textSecondary",
   flexGrow: 1,
+
+  variants: {
+    small: {
+      true: {
+        borderTopWidth: "$px",
+        opacity: "20%",
+      },
+    },
+  },
 });
 
 export { HorizontalLine };

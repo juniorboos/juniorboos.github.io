@@ -1,5 +1,8 @@
 import { createStitches } from "@stitches/react";
 export * from "@stitches/react";
+
+type Spacing = string | number;
+
 export const { styled, css } = createStitches({
   media: {
     bp1: "(min-width: 576px)",
@@ -91,5 +94,30 @@ export const { styled, css } = createStitches({
       default: "all 0.3s",
       button: "all 0.1s",
     },
+  },
+  utils: {
+    m: (value: Spacing) => ({
+      margin: value,
+    }),
+    mt: (value: Spacing) => ({
+      marginTop: value,
+    }),
+    mr: (value: Spacing) => ({
+      marginRight: value,
+    }),
+    mb: (value: Spacing) => ({
+      marginBottom: value,
+    }),
+    ml: (value: Spacing) => ({
+      marginLeft: value,
+    }),
+    mx: (value: Spacing) => ({
+      marginLeft: value,
+      marginRight: value,
+    }),
+    my: (value: Spacing) => ({
+      marginTop: value,
+      marginBottom: value,
+    }),
   },
 });

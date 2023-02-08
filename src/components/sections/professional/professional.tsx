@@ -8,11 +8,14 @@ import {
   JobDescriptionSkills,
   StyledContent,
   StyledProfessional,
+  TechnologiesList,
 } from "./professional.styles";
 
 import ProfessionalContent from "../../../content/professional";
 import { useState } from "react";
 import { SectionProps } from "types";
+import Anchor from "~atoms/anchor";
+import { HorizontalLine } from "~atoms/horizontal-line";
 
 const Professional = (props: SectionProps) => {
   const { title, companies } = ProfessionalContent;
@@ -36,11 +39,26 @@ const Professional = (props: SectionProps) => {
         <JobDescription>
           <Typography size="xl" weight="bold">
             {selectedCompany.role}{" "}
-            <Typography size="xl" color="accent" as="a">
+            <Typography
+              size="xl"
+              color="accent"
+              as="a"
+              href={selectedCompany.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               @{selectedCompany.name}
             </Typography>
           </Typography>
           <Typography weight="bold">{selectedCompany.period}</Typography>
+          <HorizontalLine small css={{ my: "1rem" }} />
+          <TechnologiesList aria-label="Technologies">
+            {selectedCompany.technologies.map(({ Icon, name, url }) => (
+              <Anchor href={url} key={`${selectedCompany.name}-${name}`}>
+                <Icon size={24} title={name} aria-hidden />
+              </Anchor>
+            ))}
+          </TechnologiesList>
           <JobDescriptionSkills>
             {selectedCompany.responsabilities.map((responsability, idx) => (
               <li key={idx}>

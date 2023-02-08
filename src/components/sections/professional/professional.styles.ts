@@ -11,6 +11,7 @@ const StyledProfessional = styled("section", {
 const StyledContent = styled("div", {
   display: "flex",
   flexDirection: "column",
+  width: "100%",
   maxWidth: "100%",
   gap: "$8",
 
@@ -24,6 +25,7 @@ const CompaniesList = styled("ul", {
   display: "flex",
   backgroundColor: "$backgroundSecondary",
   overflow: "auto",
+  height: "fit-content",
 
   borderTopWidth: "$line",
   borderTopStyle: "$solid",
@@ -87,6 +89,23 @@ const JobDescriptionSkills = styled("ul", {
   },
 });
 
+const TechnologiesList = styled("div", {
+  display: "flex",
+  alignItems: "center",
+  gap: "$4",
+  transition: "$default",
+  flexWrap: "wrap",
+
+  "& svg": {
+    fill: "$textSecondary",
+
+    "&:hover": {
+      fill: "$primary",
+      transform: "scale(1.1)",
+    },
+  },
+});
+
 export {
   StyledProfessional,
   StyledContent,
@@ -94,4 +113,5 @@ export {
   CompanyListItem,
   JobDescription,
   JobDescriptionSkills,
+  TechnologiesList,
 };
