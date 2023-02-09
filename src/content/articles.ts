@@ -3,6 +3,8 @@ export default {
   articles: [
     {
       imgUrl: "https://miro.medium.com/max/720/1*kej2WmeUuzxtY37oqQc_5Q.webp",
+      imgAlt:
+        "Hero with a React suit holding javascript tools in the shape of energy",
       title: "The Ultimate Guide to Setting Up Your React Component Library",
       postedBy: "xgeeks",
       description:

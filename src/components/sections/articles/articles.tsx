@@ -9,6 +9,7 @@ import {
 } from "./articles.styles";
 import ArticlesContent from "../../../content/articles";
 import { SectionProps } from "types";
+import { HorizontalLine } from "~atoms/horizontal-line";
 
 const Articles = (props: SectionProps) => {
   const { title, articles } = ArticlesContent;
@@ -18,14 +19,13 @@ const Articles = (props: SectionProps) => {
       <ArticlesList>
         {articles.map((article, idx) => (
           <ArticleCard key={`${article.title}-${idx}`}>
-            <img src={article.imgUrl} loading="lazy" />
+            <img src={article.imgUrl} loading="lazy" alt={article.imgAlt} />
             <ArticleInfo>
               <Typography weight="bold">{article.title}</Typography>
               <ArticleMeta>
-                <Typography size="s" color="secondary">
-                  Posted by: {article.postedBy}
-                </Typography>
+                <Typography size="s">Posted by: {article.postedBy}</Typography>
               </ArticleMeta>
+              <HorizontalLine small />
               <Typography>{article.description}</Typography>
               <Typography as="a" color="accent" href={article.url}>
                 Read More...
