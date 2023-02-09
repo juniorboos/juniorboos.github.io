@@ -8,14 +8,14 @@ import { SiGooglecloud } from "@react-icons/all-files/si/SiGooglecloud";
 import { SiJavascript } from "@react-icons/all-files/si/SiJavascript";
 import { SiJest } from "@react-icons/all-files/si/SiJest";
 import { SiKeras } from "@react-icons/all-files/si/SiKeras";
-import { SiMaterialUi } from "@react-icons/all-files/si/SiMaterialui";
-import { SiNextDotJs } from "@react-icons/all-files/si/SiNextdotjs";
-import { SiNodeDotJs } from "@react-icons/all-files/si/SiNodedotjs";
+import { SiMaterialUi } from "@react-icons/all-files/si/SiMaterialUi";
+import { SiNextDotJs } from "@react-icons/all-files/si/SiNextDotJs";
+import { SiNodeDotJs } from "@react-icons/all-files/si/SiNodeDotJs";
 import { SiPython } from "@react-icons/all-files/si/SiPython";
 import { SiReact } from "@react-icons/all-files/si/SiReact";
 import { SiRedux } from "@react-icons/all-files/si/SiRedux";
 import { SiStorybook } from "@react-icons/all-files/si/SiStorybook";
-import { SiStyledComponents } from "@react-icons/all-files/si/SiStyledcomponents";
+import { SiStyledComponents } from "@react-icons/all-files/si/SiStyledComponents";
 import { SiTensorflow } from "@react-icons/all-files/si/SiTensorflow";
 import { SiTypescript } from "@react-icons/all-files/si/SiTypescript";
 
