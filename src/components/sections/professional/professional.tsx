@@ -1,4 +1,4 @@
-import { MdDoubleArrow } from "react-icons/md";
+import { MdArrowForward } from "@react-icons/all-files/md/MdArrowForward";
 import { SectionTitle } from "~atoms/section-title";
 import { Typography } from "~atoms/typography";
 import {
@@ -62,7 +62,7 @@ const Professional = (props: SectionProps) => {
           <JobDescriptionSkills>
             {selectedCompany.responsabilities.map((responsability, idx) => (
               <li key={idx}>
-                <MdDoubleArrow />
+                <MdArrowForward />
                 <Typography>{responsability}</Typography>
               </li>
             ))}

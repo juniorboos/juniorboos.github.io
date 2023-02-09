@@ -1,4 +1,4 @@
-import { IconType } from "react-icons/lib";
+import { IconType } from "@react-icons/all-files/lib";
 import Anchor from "~atoms/anchor";
 import { SocialMediaWrapper } from "./social-links.styles";
 
@@ -17,7 +17,7 @@ const SocialMedia = ({ links }: SocialMediaProps) => {
     <SocialMediaWrapper>
       {links.map(({ url, name, Icon }) => (
         <Anchor href={url} key={url} aria-label={`Link to ${name}`}>
-          <Icon size="1.5rem" aria-hidden />
+          {/* <Icon size="1.5rem" aria-hidden /> */}
         </Anchor>
       ))}
     </SocialMediaWrapper>

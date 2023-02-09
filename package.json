@@ -2,16 +2,17 @@
   "name": "portfolio-vite",
   "private": true,
   "version": "0.0.0",
+  "sideEffects": false,
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
     "@stitches/react": "^1.2.8",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.7.1"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",

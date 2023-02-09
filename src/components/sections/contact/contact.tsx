@@ -1,6 +1,7 @@
 import { Button } from "~atoms/button";
-import { HiOutlineLocationMarker } from "react-icons/hi";
-import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
+import { HiOutlineLocationMarker } from "@react-icons/all-files/hi/HiOutlineLocationMarker";
+import { AiOutlinePhone } from "@react-icons/all-files/ai/AiOutlinePhone";
+import { AiOutlineMail } from "@react-icons/all-files/ai/AiOutlineMail";
 import { Typography } from "~atoms/typography";
 import {
   ContactInfo,

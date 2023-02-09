@@ -7,7 +7,7 @@ import {
   NavList,
   NavListItem,
 } from "./header.styles";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu } from "@react-icons/all-files/gi/GiHamburgerMenu";
 import { useState } from "react";
 import NavbarContent from "../../../content/navbar";
 import { scrollIntoView } from "../../../hooks/scrollIntoView";

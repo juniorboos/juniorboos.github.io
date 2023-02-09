@@ -38,10 +38,10 @@ const Intro = (props: SectionProps) => {
         </Button>
       </StyledTextWrapper>
       <StyledPictureWrapper>
-        <StyledRotatingLogo src={PortfolioLogo} />
-        <StyledRectangle src={RectBelow} below />
-        <StyledRectangle src={RectAbove} />
-        <StyledProfilePicture src={ProfilePicture} />
+        <StyledRotatingLogo src={PortfolioLogo} aria-hidden />
+        <StyledRectangle src={RectBelow} below aria-hidden />
+        <StyledRectangle src={RectAbove} aria-hidden />
+        <StyledProfilePicture src={ProfilePicture} aria-hidden />
       </StyledPictureWrapper>
     </StyledIntroWrapper>
   );

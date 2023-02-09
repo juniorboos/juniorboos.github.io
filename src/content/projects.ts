@@ -8,7 +8,7 @@ import {
   react,
   reactNative,
   redux,
-  sqlite,
+  // sqlite,
   styledComponents,
   tensorflow,
 } from "./technologies";
@@ -22,7 +22,7 @@ export default {
         description:
           "Conversation module for an assistant robot using machine learning and natural language processing.",
         url: "https://github.com/juniorboos/ChatbotIPB",
-        technologies: [python, tensorflow, keras, sqlite],
+        technologies: [python, tensorflow, keras],
       },
       {
         name: "AgendaPG",

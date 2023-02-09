@@ -1,4 +1,3 @@
-import { BsGithub } from "react-icons/bs";
 import { SectionTitle } from "~atoms/section-title";
 import {
   HorizontalLine,
@@ -11,8 +10,8 @@ import {
   TitleWrapper,
 } from "./projects.styles";
 import ProjectsContent from "../../../content/projects";
-import { IconType } from "react-icons/lib";
-import { SiGithub } from "react-icons/si";
+import { IconType } from "@react-icons/all-files/lib";
+import { SiGithub } from "@react-icons/all-files/si/SiGithub";
 import { Typography } from "~atoms/typography";
 import Anchor from "~atoms/anchor";
 import { SectionProps } from "types";
