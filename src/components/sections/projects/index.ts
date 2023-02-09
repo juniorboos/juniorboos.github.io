@@ -1,3 +1,1 @@
-import { Projects } from "./projects";
-
-export default Projects;
+export { Projects as default } from "./projects";

@@ -43,6 +43,13 @@ const ArticleInfo = styled("div", {
   flexDirection: "column",
   padding: "$5",
   gap: "$2",
+
+  "& a": {
+    width: "fit-content",
+    "&:hover": {
+      textDecoration: "underline",
+    },
+  },
 });
 
 const ArticleMeta = styled("div", {

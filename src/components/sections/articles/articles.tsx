@@ -22,13 +22,13 @@ const Articles = (props: SectionProps) => {
             <ArticleInfo>
               <Typography weight="bold">{article.title}</Typography>
               <ArticleMeta>
-                <Typography size="s" as="a" href="#">
+                <Typography size="s" color="secondary">
                   Posted by: {article.postedBy}
                 </Typography>
               </ArticleMeta>
               <Typography>{article.description}</Typography>
               <Typography as="a" color="accent" href={article.url}>
-                Read More..
+                Read More...
               </Typography>
             </ArticleInfo>
           </ArticleCard>

@@ -1,3 +1,1 @@
-import { Professional } from "./professional";
-
-export default Professional;
+export { Professional as default } from "./professional";

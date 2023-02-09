@@ -6,7 +6,7 @@ import Intro from "~sections/intro";
 const About = lazy(() => import("~sections/about"));
 const Professional = lazy(() => import("~sections/professional"));
 const Projects = lazy(() => import("~sections/projects"));
-// const Articles = lazy(() => import("~sections/articles"));
+const Articles = lazy(() => import("~sections/articles"));
 const Contact = lazy(() => import("~sections/contact"));
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
         <About id="about-section" />
         <Professional id="professional-section" />
         <Projects id="projects-section" />
-        {/* <Articles id="articles-section" /> */}
+        <Articles id="articles-section" />
         <Contact id="contact-section" />
       </Suspense>
     </AppWrapper>

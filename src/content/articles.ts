@@ -2,31 +2,12 @@ export default {
   title: "My articles",
   articles: [
     {
-      imgUrl:
-        "https://cdn-images-1.medium.com/max/800/1*kej2WmeUuzxtY37oqQc_5Q.png",
-      title: "Article title very long",
+      imgUrl: "https://miro.medium.com/max/720/1*kej2WmeUuzxtY37oqQc_5Q.webp",
+      title: "The Ultimate Guide to Setting Up Your React Component Library",
       postedBy: "xgeeks",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.",
-      url: "/",
-    },
-    {
-      imgUrl:
-        "https://cdn-images-1.medium.com/max/800/1*kej2WmeUuzxtY37oqQc_5Q.png",
-      title: "Article title very long",
-      postedBy: "xgeeks",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.",
-      url: "/",
-    },
-    {
-      imgUrl:
-        "https://cdn-images-1.medium.com/max/800/1*kej2WmeUuzxtY37oqQc_5Q.png",
-      title: "Article title very long",
-      postedBy: "xgeeks",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut ad vel dolorum, iusto velit, minima? Voluptas nemo harum impedit nisi.",
-      url: "/",
+        "Have you ever had that components folder that kept getting copied from one project to another just to reuse good custom components? ...",
+      url: "https://medium.com/xgeeks/the-ultimate-guide-to-setting-up-your-react-component-library-549c43c1adc9",
     },
   ],
 };
