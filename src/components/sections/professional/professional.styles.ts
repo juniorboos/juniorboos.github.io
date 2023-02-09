@@ -95,6 +95,7 @@ const TechnologiesList = styled("ul", {
   gap: "$4",
   transition: "$default",
   flexWrap: "wrap",
+  listStyle: "none",
 
   "& svg": {
     fill: "$textSecondary",
