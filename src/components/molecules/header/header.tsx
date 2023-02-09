@@ -20,8 +20,11 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <NavLogo onClick={() => scrollIntoView("intro-section")}>
-        <img src={logo.imgUrl} width={36} height={36} />
+      <NavLogo
+        onClick={() => scrollIntoView("intro-section")}
+        aria-label="Return to homepage"
+      >
+        <img src={logo.imgUrl} width={36} height={36} aria-hidden />
       </NavLogo>
       <NavToggler
         onClick={handleToggle}

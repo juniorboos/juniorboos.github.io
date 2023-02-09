@@ -1,4 +1,4 @@
-import ProfilePicture from "../assets/images/profile.png";
+import ProfilePicture from "../assets/images/profile.webp";
 
 export default {
   title: "About me",

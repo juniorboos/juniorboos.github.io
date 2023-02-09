@@ -54,12 +54,14 @@ const Professional = (props: SectionProps) => {
           <HorizontalLine small css={{ my: "1rem" }} />
           <TechnologiesList aria-label="Technologies">
             {selectedCompany.technologies.map(({ Icon, name, url }) => (
-              <Anchor href={url} key={`${selectedCompany.name}-${name}`}>
-                <Icon size={24} title={name} aria-hidden />
-              </Anchor>
+              <li key={`${selectedCompany.name}-${name}`}>
+                <Anchor href={url} aria-label={name}>
+                  <Icon size={24} title={name} aria-hidden />
+                </Anchor>
+              </li>
             ))}
           </TechnologiesList>
-          <JobDescriptionSkills>
+          <JobDescriptionSkills aria-label="Responsabilities">
             {selectedCompany.responsabilities.map((responsability, idx) => (
               <li key={idx}>
                 <MdArrowForward />

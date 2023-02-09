@@ -8,9 +8,8 @@ const Typography = styled("p", {
   background: "none",
   border: "none",
 
-  "& span": {
-    color: "$textAccent",
-    fontWeight: "$bold",
+  "& a:hover": {
+    textDecoration: "underline",
   },
 
   variants: {

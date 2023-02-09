@@ -86,7 +86,7 @@ const StyledCard = styled("div", {
   },
 });
 
-const TechnologiesList = styled("div", {
+const TechnologiesList = styled("ul", {
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "center",

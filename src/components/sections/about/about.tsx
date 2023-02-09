@@ -26,7 +26,13 @@ const About = (props: SectionProps) => {
             ))}
           </ul>
         </StyledTextWrapper>
-        <StyledPicture src={profilePicture} loading="lazy" aria-hidden />
+        <StyledPicture
+          src={profilePicture}
+          loading="lazy"
+          aria-hidden
+          width={360}
+          height={360}
+        />
       </StyledContentWrapper>
     </StyledAboutWrapper>
   );

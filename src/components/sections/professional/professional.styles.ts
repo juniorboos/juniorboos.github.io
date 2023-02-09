@@ -89,7 +89,7 @@ const JobDescriptionSkills = styled("ul", {
   },
 });
 
-const TechnologiesList = styled("div", {
+const TechnologiesList = styled("ul", {
   display: "flex",
   alignItems: "center",
   gap: "$4",

@@ -39,20 +39,17 @@ const ProjectCard = ({ project }: ProjectCardProps) => (
     <StyledOverlay>
       <TitleWrapper>
         <Typography weight="bold">{project.name}</Typography>
-        <Anchor href={project.url}>
+        <Anchor href={project.url} aria-label="Go to repository">
           <SiGithub size="1.5rem" aria-hidden />
         </Anchor>
       </TitleWrapper>
       <TechnologiesList>
-        {project.technologies.map(({ Icon, name, url }, idx) => (
-          <Anchor
-            href={url}
-            aria-label={name}
-            target="_blank"
-            key={`${project.name}-${name}`}
-          >
-            <Icon size="1.5rem" aria-hidden />
-          </Anchor>
+        {project.technologies.map(({ Icon, name, url }) => (
+          <ul key={`${project.name}-${name}`}>
+            <Anchor href={url} aria-label={name} target="_blank">
+              <Icon size="1.5rem" aria-hidden />
+            </Anchor>
+          </ul>
         ))}
       </TechnologiesList>
     </StyledOverlay>

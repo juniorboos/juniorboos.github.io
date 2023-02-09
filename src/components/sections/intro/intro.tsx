@@ -9,16 +9,19 @@ import {
   StyledRotatingLogo,
 } from "./intro.styles";
 import PortfolioLogo from "../../../assets/icons/portfolio-logo.svg";
-import ProfilePicture from "../../../assets/images/profile-transparent.png";
+import ProfilePicture from "../../../assets/images/profile-transparent.webp";
 import RectAbove from "../../../assets/images/rect-above.svg";
 import RectBelow from "../../../assets/images/rect-below.svg";
 import { SocialMedia } from "~molecules/social-links";
 import IntroContent from "../../../content/intro";
 import { SectionProps } from "types";
+import useImagePreloader from "../../../hooks/useImagePreloader";
 
 const Intro = (props: SectionProps) => {
   const { pretitle, title, subtitle, description, social_media, cv } =
     IntroContent;
+  const { imagesPreloaded } = useImagePreloader([ProfilePicture]);
+
   return (
     <StyledIntroWrapper {...props}>
       <StyledTextWrapper>
@@ -41,7 +44,9 @@ const Intro = (props: SectionProps) => {
         <StyledRotatingLogo src={PortfolioLogo} aria-hidden />
         <StyledRectangle src={RectBelow} below aria-hidden />
         <StyledRectangle src={RectAbove} aria-hidden />
-        <StyledProfilePicture src={ProfilePicture} aria-hidden />
+        {imagesPreloaded && (
+          <StyledProfilePicture src={ProfilePicture} aria-hidden />
+        )}
       </StyledPictureWrapper>
     </StyledIntroWrapper>
   );

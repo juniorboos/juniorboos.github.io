@@ -27,10 +27,6 @@ const globalStyles = globalCss({
   },
 
   "a, button": { cursor: "pointer" },
-
-  "a:hover": {
-    textDecoration: "underline",
-  },
 });
 
 export { globalStyles };

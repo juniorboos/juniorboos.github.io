@@ -35,6 +35,7 @@ const StyledTextWrapper = styled("div", {
 
 const StyledPicture = styled("img", {
   width: 360,
+  height: "auto",
   maxWidth: "100%",
   marginBottom: "$6",
   marginRight: 12,
