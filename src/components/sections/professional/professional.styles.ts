@@ -92,16 +92,19 @@ const JobDescriptionSkills = styled("ul", {
 const TechnologiesList = styled("ul", {
   display: "flex",
   alignItems: "center",
-  gap: "$4",
+  gap: "$3",
   transition: "$default",
   flexWrap: "wrap",
   listStyle: "none",
 
   "& svg": {
     fill: "$textSecondary",
+    padding: "$1",
+    borderRadius: "$1",
 
     "&:hover": {
-      fill: "$primary",
+      fill: "$textPrimary",
+      backgroundColor: "$backgroundAccent",
       transform: "scale(1.1)",
     },
   },

@@ -8,9 +8,13 @@ const SocialMediaWrapper = styled("div", {
 
   "& a > svg": {
     fill: "$textSecondary",
+    padding: "$1",
+    borderRadius: "$1",
+
     "&:hover": {
-      transform: "scale(1.1)",
       fill: "$textPrimary",
+      backgroundColor: "$backgroundAccent",
+      transform: "scale(1.1)",
     },
   },
 

@@ -56,7 +56,7 @@ const Professional = (props: SectionProps) => {
             {selectedCompany.technologies.map(({ Icon, name, url }) => (
               <li key={`${selectedCompany.name}-${name}`}>
                 <Anchor href={url} aria-label={name}>
-                  <Icon size={24} title={name} aria-hidden />
+                  <Icon size={32} title={name} aria-hidden />
                 </Anchor>
               </li>
             ))}
