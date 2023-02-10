@@ -15,12 +15,10 @@ import RectBelow from "../../../assets/images/rect-below.svg";
 import { SocialMedia } from "~molecules/social-links";
 import IntroContent from "../../../content/intro";
 import { SectionProps } from "types";
-import useImagePreloader from "../../../hooks/useImagePreloader";
 
 const Intro = (props: SectionProps) => {
   const { pretitle, title, subtitle, description, social_media, cv } =
     IntroContent;
-  const { imagesPreloaded } = useImagePreloader([ProfilePicture]);
 
   return (
     <StyledIntroWrapper {...props}>
@@ -44,9 +42,7 @@ const Intro = (props: SectionProps) => {
         <StyledRotatingLogo src={PortfolioLogo} aria-hidden />
         <StyledRectangle src={RectBelow} below aria-hidden />
         <StyledRectangle src={RectAbove} aria-hidden />
-        {imagesPreloaded && (
-          <StyledProfilePicture src={ProfilePicture} aria-hidden />
-        )}
+        <StyledProfilePicture src={ProfilePicture} aria-hidden />
       </StyledPictureWrapper>
     </StyledIntroWrapper>
   );
