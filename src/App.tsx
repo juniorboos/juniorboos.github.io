@@ -13,15 +13,13 @@ const App = () => {
   globalStyles();
   return (
     <AppWrapper>
-      <Suspense fallback={<p>Loading</p>}>
-        <Header />
-        <Intro id="intro-section" />
-        <About id="about-section" />
-        <Professional id="professional-section" />
-        <Projects id="projects-section" />
-        <Articles id="articles-section" />
-        <Contact id="contact-section" />
-      </Suspense>
+      <Header />
+      <Intro id="intro-section" />
+      <About id="about-section" />
+      <Professional id="professional-section" />
+      <Projects id="projects-section" />
+      <Articles id="articles-section" />
+      <Contact id="contact-section" />
     </AppWrapper>
   );
 };
