@@ -34,7 +34,7 @@ const Intro = (props: SectionProps) => {
         </div>
         <Typography color="secondary">{description}</Typography>
         <SocialMedia links={social_media} />
-        <Button as="a" href={cv.url}>
+        <Button as="a" href={cv.url} target="_blank" rel="noopener noreferrer">
           {cv.text}
         </Button>
       </StyledTextWrapper>

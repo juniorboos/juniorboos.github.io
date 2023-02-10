@@ -1,7 +1,8 @@
 import { styled } from "~stitches";
 
 const AppWrapper = styled("div", {
-  backgroundColor: "$background",
+  background:
+    "linear-gradient(180deg, #020C1B 10%, #140535 25%, #020C1B 35%, #120827 55%, #10021B 70%, #020C1B 85%, #110211 100%)",
 
   display: "flex",
   flexDirection: "column",
