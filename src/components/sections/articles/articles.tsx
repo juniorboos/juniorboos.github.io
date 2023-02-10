@@ -19,7 +19,13 @@ const Articles = (props: SectionProps) => {
       <ArticlesList>
         {articles.map((article, idx) => (
           <ArticleCard key={`${article.title}-${idx}`}>
-            <img src={article.imgUrl} loading="lazy" alt={article.imgAlt} />
+            <img
+              src={article.imgUrl}
+              loading="lazy"
+              alt={article.imgAlt}
+              width={360}
+              height={308}
+            />
             <ArticleInfo>
               <Typography weight="bold">{article.title}</Typography>
               <ArticleMeta>

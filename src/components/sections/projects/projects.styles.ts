@@ -59,7 +59,7 @@ const StyledOverlay = styled("div", {
     },
 
     "&:hover > svg": {
-      fill: "$textSecondary",
+      backgroundColor: "$primary",
     },
   },
 });

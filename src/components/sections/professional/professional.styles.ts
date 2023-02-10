@@ -96,18 +96,6 @@ const TechnologiesList = styled("ul", {
   transition: "$default",
   flexWrap: "wrap",
   listStyle: "none",
-
-  "& svg": {
-    fill: "$textSecondary",
-    padding: "$1",
-    borderRadius: "$1",
-
-    "&:hover": {
-      fill: "$textPrimary",
-      backgroundColor: "$backgroundAccent",
-      transform: "scale(1.1)",
-    },
-  },
 });
 
 export {

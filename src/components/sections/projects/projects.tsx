@@ -40,14 +40,14 @@ const ProjectCard = ({ project }: ProjectCardProps) => (
       <TitleWrapper>
         <Typography weight="bold">{project.name}</Typography>
         <Anchor href={project.url} aria-label="Go to repository">
-          <SiGithub size="1.5rem" aria-hidden />
+          <SiGithub size="2rem" aria-hidden />
         </Anchor>
       </TitleWrapper>
       <TechnologiesList>
         {project.technologies.map(({ Icon, name, url }) => (
           <ul key={`${project.name}-${name}`}>
             <Anchor href={url} aria-label={name} target="_blank">
-              <Icon size="1.5rem" aria-hidden />
+              <Icon size="2rem" aria-hidden />
             </Anchor>
           </ul>
         ))}

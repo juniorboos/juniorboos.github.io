@@ -24,7 +24,7 @@ export const { styled, css } = createStitches({
       backgroundSecondary: "#0d1024",
       backgroundTertiary: "#171826",
       backgroundLight: "#FFFFFF",
-      backgroundAccent: "#503b8f",
+      backgroundAccent: "#312066",
 
       scrollThumb: "#37256b",
       scrollHover: "#503b8f",
