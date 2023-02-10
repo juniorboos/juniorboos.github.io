@@ -3,11 +3,11 @@ import { Header } from "~molecules/header";
 import { AppWrapper } from "./App.styles";
 import { globalStyles } from "~theme/global-styles";
 import Intro from "~sections/intro";
-const About = lazy(() => import("~sections/about"));
-const Professional = lazy(() => import("~sections/professional"));
-const Projects = lazy(() => import("~sections/projects"));
-const Articles = lazy(() => import("~sections/articles"));
-const Contact = lazy(() => import("~sections/contact"));
+import About from "~sections/about";
+import Professional from "~sections/professional";
+import Projects from "~sections/projects";
+import Articles from "~sections/articles";
+import Contact from "~sections/contact";
 
 const App = () => {
   globalStyles();
