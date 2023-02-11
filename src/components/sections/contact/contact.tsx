@@ -15,6 +15,7 @@ import {
 import ContactContent from "../../../content/contact";
 import { FormEvent, useState } from "react";
 import { SectionProps } from "types";
+import { useContact } from "hooks/useContact";
 
 const Contact = (props: SectionProps) => {
   const { title, form, location, phone, email } = ContactContent;
@@ -24,34 +25,7 @@ const Contact = (props: SectionProps) => {
     message: "",
   });
 
-  const [isLoading, setIsLoading] = useState(false);
-
-  const {
-    VITE_GOOGLE_FORM_MESSAGE_ID,
-    VITE_GOOGLE_FORM_EMAIL_ID,
-    VITE_GOOGLE_FORM_ACTION_URL,
-  } = import.meta.env;
-
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("submiting...");
-    const formData = new FormData();
-    formData.append(VITE_GOOGLE_FORM_MESSAGE_ID, formFields.message);
-    formData.append(VITE_GOOGLE_FORM_EMAIL_ID, formFields.email);
-
-    setIsLoading(true);
-
-    fetch(VITE_GOOGLE_FORM_ACTION_URL, { method: "post", body: formData })
-      .then((res) => {
-        console.log("res: ", res);
-        alert("Message sent!");
-      })
-      .catch((error) => alert(error))
-      .finally(() => {
-        setFormFields({ email: "", message: "" });
-        setIsLoading(false);
-      });
-  };
+  const { isLoading, onSubmit } = useContact(formFields);
 
   return (
     <StyledContact {...props}>
