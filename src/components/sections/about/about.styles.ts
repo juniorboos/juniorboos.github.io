@@ -26,11 +26,6 @@ const StyledTextWrapper = styled("div", {
   flexDirection: "column",
   gap: "$6",
   color: "$textPrimary",
-
-  "& ul": {
-    listStyle: "none",
-    color: "$textAccent",
-  },
 });
 
 const StyledPicture = styled("img", {
