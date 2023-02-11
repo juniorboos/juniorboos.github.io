@@ -13,9 +13,9 @@ import {
   WavesSvgWrapper,
 } from "./contact.styles";
 import ContactContent from "../../../content/contact";
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { SectionProps } from "types";
-import { useContact } from "hooks/useContact";
+import { useContact } from "../../../hooks/useContact";
 
 const Contact = (props: SectionProps) => {
   const { title, form, location, phone, email } = ContactContent;
