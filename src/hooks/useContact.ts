@@ -29,11 +29,13 @@ const useContact = (form: RefObject<HTMLFormElement>) => {
     return fetch(VITE_GOOGLE_FORM_ACTION_URL, {
       method: "post",
       body: formData,
-    }).finally(() => {
-      setIsLoading(false);
-      form.current?.reset();
-      alert("Message sent!");
-    });
+    })
+      .catch(() => {})
+      .finally(() => {
+        setIsLoading(false);
+        form.current?.reset();
+        alert("Message sent!");
+      });
   };
 
   return {
