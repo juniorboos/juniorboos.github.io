@@ -53,6 +53,7 @@ const StyledOverlay = styled("div", {
 
   "& a": {
     textDecoration: "none",
+    height: "2rem",
 
     "& svg": {
       fill: "$textPrimary",
@@ -93,6 +94,8 @@ const TechnologiesList = styled("ul", {
   alignItems: "center",
   gap: "$3",
   flexGrow: 1,
+
+  "& li": { display: "flex" },
 
   "@bp2": {
     gap: "$4",

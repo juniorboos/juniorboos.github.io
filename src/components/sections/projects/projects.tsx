@@ -45,11 +45,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => (
       </TitleWrapper>
       <TechnologiesList>
         {project.technologies.map(({ Icon, name, url }) => (
-          <ul key={`${project.name}-${name}`}>
+          <li key={`${project.name}-${name}`}>
             <Anchor href={url} aria-label={name} target="_blank">
               <Icon size="2rem" aria-hidden />
             </Anchor>
-          </ul>
+          </li>
         ))}
       </TechnologiesList>
     </StyledOverlay>
