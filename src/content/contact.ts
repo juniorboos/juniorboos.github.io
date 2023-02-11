@@ -3,7 +3,10 @@ export default {
   form: {
     emailPlaceholder: "Enter your email",
     messagePlaceholder: "Message",
-    button: "Send Message",
+    button: {
+      default: "Send Message",
+      loading: "Sending...",
+    },
   },
   location: {
     label: "Location",

@@ -13,19 +13,14 @@ import {
   WavesSvgWrapper,
 } from "./contact.styles";
 import ContactContent from "../../../content/contact";
-import { useState } from "react";
+import { useRef } from "react";
 import { SectionProps } from "types";
 import { useContact } from "../../../hooks/useContact";
 
 const Contact = (props: SectionProps) => {
   const { title, form, location, phone, email } = ContactContent;
-
-  const [formFields, setFormFields] = useState({
-    email: "",
-    message: "",
-  });
-
-  const { isLoading, onSubmit } = useContact(formFields);
+  const formRef = useRef<HTMLFormElement>(null);
+  const { isLoading, onSubmit } = useContact(formRef);
 
   return (
     <StyledContact {...props}>
@@ -34,34 +29,22 @@ const Contact = (props: SectionProps) => {
           <Typography weight="bold" size="l">
             {title}
           </Typography>
-          <form onSubmit={onSubmit}>
+          <form onSubmit={onSubmit} ref={formRef}>
             <input
               type="email"
+              name="email"
               placeholder={form.emailPlaceholder}
               required
-              value={formFields.email}
-              onChange={(e) =>
-                setFormFields((formFields) => ({
-                  ...formFields,
-                  email: e.target.value,
-                }))
-              }
             />
             <textarea
+              name="message"
               required
               cols={30}
               rows={6}
               placeholder={form.messagePlaceholder}
-              value={formFields.message}
-              onChange={(e) =>
-                setFormFields((formFields) => ({
-                  ...formFields,
-                  message: e.target.value,
-                }))
-              }
             />
             <Button type="submit" variant="secondary" disabled={isLoading}>
-              {form.button}
+              {form.button[isLoading ? "loading" : "default"]}
             </Button>
           </form>
         </FormWrapper>

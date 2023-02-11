@@ -1,11 +1,11 @@
-import { FormEvent, useState } from "react";
+import { RefObject, SyntheticEvent, useState } from "react";
 
 interface FormFieldsProps {
   email: string;
   message: string;
 }
 
-const useContact = (formFields: FormFieldsProps) => {
+const useContact = (form: RefObject<HTMLFormElement>) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const {
@@ -14,18 +14,26 @@ const useContact = (formFields: FormFieldsProps) => {
     VITE_GOOGLE_FORM_ACTION_URL,
   } = import.meta.env;
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
+    const target = e.target as typeof e.target & {
+      email: { value: string };
+      message: { value: string };
+    };
     const formData = new FormData();
-    formData.append(VITE_GOOGLE_FORM_MESSAGE_ID, formFields.message);
-    formData.append(VITE_GOOGLE_FORM_EMAIL_ID, formFields.email);
+    formData.append(VITE_GOOGLE_FORM_MESSAGE_ID, target.message.value);
+    formData.append(VITE_GOOGLE_FORM_EMAIL_ID, target.email.value);
 
     setIsLoading(true);
 
-    fetch(VITE_GOOGLE_FORM_ACTION_URL, { method: "post", body: formData })
-      .then(() => alert("Message sent!"))
-      .catch((error) => alert(error))
-      .finally(() => setIsLoading(false));
+    return fetch(VITE_GOOGLE_FORM_ACTION_URL, {
+      method: "post",
+      body: formData,
+    }).finally(() => {
+      setIsLoading(false);
+      form.current?.reset();
+      alert("Message sent!");
+    });
   };
 
   return {
