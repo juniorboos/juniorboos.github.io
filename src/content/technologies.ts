@@ -18,8 +18,21 @@ import { SiStorybook } from "@react-icons/all-files/si/SiStorybook";
 import { SiStyledComponents } from "@react-icons/all-files/si/SiStyledComponents";
 import { SiTensorflow } from "@react-icons/all-files/si/SiTensorflow";
 import { SiTypescript } from "@react-icons/all-files/si/SiTypescript";
+import { SiSimpleicons } from "@react-icons/all-files/si/SiSimpleicons";
 
 import { SiCss3 } from "@react-icons/all-files/si/SiCss3";
+
+const icons = {
+  Icon: SiSimpleicons,
+  name: "React Icons",
+  url: "https://react-icons.github.io/",
+};
+
+const stitches = {
+  Icon: SiCss3,
+  name: "Stitches",
+  url: "https://stitches.dev/",
+};
 
 const python = {
   Icon: SiPython,
@@ -190,4 +203,6 @@ export {
   golang,
   materialui,
   nodejs,
+  icons,
+  stitches,
 };

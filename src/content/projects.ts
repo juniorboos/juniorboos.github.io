@@ -2,15 +2,20 @@ import {
   css3,
   figma,
   firebase,
+  github,
+  githubActions,
   googleCloud,
+  icons,
   keras,
   python,
   react,
   reactNative,
   redux,
+  stitches,
   // sqlite,
   styledComponents,
   tensorflow,
+  typescript,
 } from "./technologies";
 
 export default {
@@ -18,11 +23,26 @@ export default {
   projects: [
     [
       {
-        name: "IPBot",
+        name: "This Portfolio",
         description:
-          "Conversation module for an assistant robot using machine learning and natural language processing.",
-        url: "https://github.com/juniorboos/ChatbotIPB",
-        technologies: [python, tensorflow, keras],
+          "I've built this entire portfolio by myself prioritizing accessibility, performance and UX. ",
+        url: "https://github.com/juniorboos/juniorboos.github.io",
+        technologies: [
+          react,
+          typescript,
+          github,
+          githubActions,
+          figma,
+          stitches,
+          icons,
+        ],
+      },
+      {
+        name: "Arbeit",
+        description:
+          "A job finder app focused on temporary jobs (Castlethon Hackathon Winner)",
+        url: "https://devpost.com/software/arbeit",
+        technologies: [reactNative, firebase, figma],
       },
       {
         name: "AgendaPG",
@@ -63,11 +83,11 @@ export default {
         technologies: [react, css3, firebase],
       },
       {
-        name: "Arbeit",
+        name: "IPBot",
         description:
-          "A job finder app focused on temporary jobs (Castlethon Hackathon Winner)",
-        url: "https://devpost.com/software/arbeit",
-        technologies: [reactNative, firebase, figma],
+          "Conversation module for an assistant robot using machine learning and natural language processing.",
+        url: "https://github.com/juniorboos/ChatbotIPB",
+        technologies: [python, tensorflow, keras],
       },
     ],
   ],

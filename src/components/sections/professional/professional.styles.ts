@@ -43,8 +43,10 @@ const CompaniesList = styled("ul", {
   },
 });
 
-const CompanyListItem = styled("li", {
+const CompanyListItem = styled("button", {
   color: "$textSecondary",
+  background: "none",
+  border: "none",
 
   display: "flex",
   alignItems: "center",
@@ -53,6 +55,12 @@ const CompanyListItem = styled("li", {
 
   "&:hover": {
     color: "$textPrimary",
+  },
+
+  "&:focus": {
+    backgroundColor: "$primary",
+    color: "$textContrast",
+    outline: "none",
   },
 
   variants: {
@@ -96,6 +104,8 @@ const TechnologiesList = styled("ul", {
   transition: "$default",
   flexWrap: "wrap",
   listStyle: "none",
+
+  "& li > a": { display: "flex" },
 });
 
 export {

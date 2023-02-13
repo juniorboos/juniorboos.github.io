@@ -1,10 +1,14 @@
 import { styled } from "~stitches";
 
-const SocialMediaWrapper = styled("div", {
+const SocialMediaWrapper = styled("ul", {
   display: "flex",
   gap: "$4",
   alignItems: "center",
   alignSelf: "center",
+
+  "& a": {
+    display: "flex",
+  },
 
   "& a > svg": {
     fill: "$textSecondary",

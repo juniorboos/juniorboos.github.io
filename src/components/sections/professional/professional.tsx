@@ -27,13 +27,14 @@ const Professional = (props: SectionProps) => {
       <StyledContent>
         <CompaniesList>
           {companies.map((company) => (
-            <CompanyListItem
-              key={company.name}
-              active={company.name === selectedCompany.name}
-              onClick={() => setSelectedCompany(company)}
-            >
-              {company.name}
-            </CompanyListItem>
+            <li key={company.name}>
+              <CompanyListItem
+                active={company.name === selectedCompany.name}
+                onClick={() => setSelectedCompany(company)}
+              >
+                {company.name}
+              </CompanyListItem>
+            </li>
           ))}
         </CompaniesList>
         <JobDescription>
@@ -52,7 +53,7 @@ const Professional = (props: SectionProps) => {
           </Typography>
           <Typography weight="bold">{selectedCompany.period}</Typography>
           <HorizontalLine small css={{ my: "1rem" }} />
-          <TechnologiesList aria-label="Technologies">
+          <TechnologiesList aria-label="Technologies" role="navigation">
             {selectedCompany.technologies.map(({ Icon, name, url }) => (
               <li key={`${selectedCompany.name}-${name}`}>
                 <Anchor href={url} aria-label={name}>
