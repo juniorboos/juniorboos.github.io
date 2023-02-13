@@ -8,7 +8,7 @@ const StyledSection = styled("section", {
 
   opacity: 0,
   transform: "translateX(-4rem)",
-  transition: "opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s",
+  transition: "opacity 0.8s, transform 0.8s",
 
   variants: {
     inView: {
