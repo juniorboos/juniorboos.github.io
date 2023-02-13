@@ -1,11 +1,8 @@
 import { styled } from "~stitches";
+import { StyledSection } from "~theme/utils";
 
-const StyledProfessional = styled("section", {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
+const StyledProfessional = styled(StyledSection, {
   alignItems: "center",
-  gap: "$8",
 });
 
 const StyledContent = styled("div", {

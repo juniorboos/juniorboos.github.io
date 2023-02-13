@@ -16,15 +16,20 @@ import ContactContent from "../../../content/contact";
 import { useRef } from "react";
 import { SectionProps } from "types";
 import { useContact } from "../../../hooks/useContact";
+import { useInView } from "react-intersection-observer";
+import { USE_IN_VIEW_THRESHOLD } from "~theme/utils";
 
 const Contact = (props: SectionProps) => {
   const { title, form, location, phone, email } = ContactContent;
   const formRef = useRef<HTMLFormElement>(null);
   const { isLoading, onSubmit } = useContact(formRef);
+  const { ref, inView } = useInView({
+    threshold: USE_IN_VIEW_THRESHOLD,
+  });
 
   return (
-    <StyledContact {...props}>
-      <StyledCard>
+    <StyledContact {...props} ref={ref} inView>
+      <StyledCard inView={inView}>
         <FormWrapper>
           <Typography weight="bold" size="l">
             {title}

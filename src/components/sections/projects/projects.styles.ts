@@ -1,12 +1,5 @@
 import { styled } from "~stitches";
 
-const StyledProjects = styled("section", {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  gap: "$8",
-});
-
 const StyledRow = styled("div", {
   display: "flex",
   flexWrap: "wrap",
@@ -118,7 +111,6 @@ const HorizontalLine = styled("hr", {
 });
 
 export {
-  StyledProjects,
   StyledRow,
   StyledColumn,
   StyledCard,

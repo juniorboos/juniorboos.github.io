@@ -1,11 +1,8 @@
 import { styled } from "~stitches";
+import { StyledSection } from "~theme/utils";
 
-const StyledAboutWrapper = styled("section", {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
+const StyledAboutWrapper = styled(StyledSection, {
   alignItems: "center",
-  gap: "$8",
   position: "relative",
 });
 

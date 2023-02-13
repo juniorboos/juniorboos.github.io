@@ -16,13 +16,18 @@ import { useState } from "react";
 import { SectionProps } from "types";
 import Anchor from "~atoms/anchor";
 import { HorizontalLine } from "~atoms/horizontal-line";
+import { useInView } from "react-intersection-observer";
+import { USE_IN_VIEW_THRESHOLD } from "~theme/utils";
 
 const Professional = (props: SectionProps) => {
   const { title, companies } = ProfessionalContent;
   const [selectedCompany, setSelectedCompany] = useState(companies[0]);
+  const { ref, inView } = useInView({
+    threshold: USE_IN_VIEW_THRESHOLD,
+  });
 
   return (
-    <StyledProfessional {...props}>
+    <StyledProfessional {...props} ref={ref} inView={inView}>
       <SectionTitle name={title} />
       <StyledContent>
         <CompaniesList>

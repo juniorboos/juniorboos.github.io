@@ -4,7 +4,6 @@ import {
   StyledCard,
   StyledColumn,
   StyledOverlay,
-  StyledProjects,
   StyledRow,
   TechnologiesList,
   TitleWrapper,
@@ -15,6 +14,8 @@ import { SiGithub } from "@react-icons/all-files/si/SiGithub";
 import { Typography } from "~atoms/typography";
 import Anchor from "~atoms/anchor";
 import { SectionProps } from "types";
+import { StyledSection, USE_IN_VIEW_THRESHOLD } from "~theme/utils";
+import { useInView } from "react-intersection-observer";
 
 interface Project {
   name: string;
@@ -58,8 +59,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => (
 
 const Projects = (props: SectionProps) => {
   const { title, projects } = ProjectsContent;
+  const { ref, inView } = useInView({
+    threshold: USE_IN_VIEW_THRESHOLD,
+  });
   return (
-    <StyledProjects {...props}>
+    <StyledSection {...props} ref={ref} inView={inView}>
       <SectionTitle name={title} />
       <StyledRow>
         {projects.map((column, idx) => (
@@ -70,7 +74,7 @@ const Projects = (props: SectionProps) => {
           </StyledColumn>
         ))}
       </StyledRow>
-    </StyledProjects>
+    </StyledSection>
   );
 };
 

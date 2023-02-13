@@ -1,12 +1,9 @@
 import { Typography } from "~atoms/typography";
 import { styled } from "~stitches";
+import { StyledSection } from "~theme/utils";
 
-const StyledContact = styled("section", {
+const StyledContact = styled(StyledSection, {
   position: "relative",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  gap: "$8",
 });
 
 const StyledCard = styled("div", {
@@ -17,6 +14,19 @@ const StyledCard = styled("div", {
   margin: "0 auto",
   zIndex: 99,
   background: "$backgroundLight",
+
+  opacity: 0,
+  transform: "translateX(-4rem)",
+  transition: "opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s",
+
+  variants: {
+    inView: {
+      true: {
+        opacity: 1,
+        transform: "translateX(0)",
+      },
+    },
+  },
 
   [`& ${Typography}`]: {
     color: "$textContrast",

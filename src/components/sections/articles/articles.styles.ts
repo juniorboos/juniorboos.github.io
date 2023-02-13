@@ -1,12 +1,5 @@
 import { styled } from "~stitches";
 
-const StyledArticles = styled("section", {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  gap: "$8",
-});
-
 const ArticlesList = styled("div", {
   display: "flex",
   justifyContent: "center",
@@ -63,4 +56,4 @@ const ArticleMeta = styled("div", {
   },
 });
 
-export { StyledArticles, ArticlesList, ArticleCard, ArticleInfo, ArticleMeta };
+export { ArticlesList, ArticleCard, ArticleInfo, ArticleMeta };

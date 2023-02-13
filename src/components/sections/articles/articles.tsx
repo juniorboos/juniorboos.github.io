@@ -5,16 +5,21 @@ import {
   ArticleInfo,
   ArticleMeta,
   ArticlesList,
-  StyledArticles,
 } from "./articles.styles";
 import ArticlesContent from "../../../content/articles";
 import { SectionProps } from "types";
 import { HorizontalLine } from "~atoms/horizontal-line";
+import { StyledSection, USE_IN_VIEW_THRESHOLD } from "~theme/utils";
+import { useInView } from "react-intersection-observer";
 
 const Articles = (props: SectionProps) => {
   const { title, articles } = ArticlesContent;
+  const { ref, inView } = useInView({
+    threshold: USE_IN_VIEW_THRESHOLD,
+  });
+
   return (
-    <StyledArticles {...props}>
+    <StyledSection {...props} ref={ref} inView={inView}>
       <SectionTitle name={title} />
       <ArticlesList>
         {articles.map((article, idx) => (
@@ -40,7 +45,7 @@ const Articles = (props: SectionProps) => {
           </ArticleCard>
         ))}
       </ArticlesList>
-    </StyledArticles>
+    </StyledSection>
   );
 };
 
