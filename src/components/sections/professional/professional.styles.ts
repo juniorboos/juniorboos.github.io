@@ -44,6 +44,7 @@ const CompanyListItem = styled("button", {
   color: "$textSecondary",
   background: "none",
   border: "none",
+  width: "100%",
 
   display: "flex",
   alignItems: "center",
