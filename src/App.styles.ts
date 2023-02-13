@@ -2,7 +2,7 @@ import { styled } from "~stitches";
 
 const AppWrapper = styled("div", {
   background:
-    "linear-gradient(180deg, #020C1B 10%, #140535 25%, #020C1B 35%, #120827 55%, #10021B 70%, #020C1B 85%, #110211 100%)",
+    "radial-gradient(circle at 90% 70vh, rgba(80, 59, 143, 0.2), rgba(255, 255, 255, 0) 3%), radial-gradient(circle at 80% 40vh, rgba(80, 59, 143, 0.5), rgba(255, 255, 255, 0) 5%), radial-gradient(circle at 0% 40vh, rgba(80, 59, 143, 0.3), rgba(255, 255, 255, 0) 4%), linear-gradient(180deg, #020C1B 10%, #140535 25%, #020C1B 35%, #120827 55%, #10021B 70%, #020C1B 85%, #110211 100%)",
 
   display: "flex",
   flexDirection: "column",
