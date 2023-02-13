@@ -30,7 +30,7 @@ const Professional = (props: SectionProps) => {
     <StyledProfessional {...props} ref={ref} inView={inView}>
       <SectionTitle name={title} />
       <StyledContent>
-        <CompaniesList>
+        <CompaniesList role="navigation">
           {companies.map((company) => (
             <li key={company.name}>
               <CompanyListItem
@@ -58,7 +58,7 @@ const Professional = (props: SectionProps) => {
           </Typography>
           <Typography weight="bold">{selectedCompany.period}</Typography>
           <HorizontalLine small css={{ my: "1rem" }} />
-          <TechnologiesList aria-label="Technologies" role="navigation">
+          <TechnologiesList aria-label="Technologies">
             {selectedCompany.technologies.map(({ Icon, name, url }) => (
               <li key={`${selectedCompany.name}-${name}`}>
                 <Anchor href={url} aria-label={name}>

@@ -16,9 +16,11 @@ const SocialMedia = ({ links }: SocialMediaProps) => {
   return (
     <SocialMediaWrapper>
       {links.map(({ url, name, Icon }) => (
-        <Anchor href={url} key={url} aria-label={`Link to ${name}`}>
-          <Icon size={32} aria-hidden />
-        </Anchor>
+        <li>
+          <Anchor href={url} key={url} aria-label={`Link to ${name}`}>
+            <Icon size={32} aria-hidden />
+          </Anchor>
+        </li>
       ))}
     </SocialMediaWrapper>
   );

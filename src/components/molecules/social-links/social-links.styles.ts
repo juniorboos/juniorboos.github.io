@@ -5,6 +5,7 @@ const SocialMediaWrapper = styled("ul", {
   gap: "$4",
   alignItems: "center",
   alignSelf: "center",
+  listStyle: "none",
 
   "& a": {
     display: "flex",
