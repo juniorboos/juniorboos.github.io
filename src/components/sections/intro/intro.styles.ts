@@ -70,10 +70,10 @@ const StyledProfilePicture = styled("img", {
   position: "absolute",
   right: 0,
   display: "none",
+  filter: "drop-shadow(black 1px 2px 25px)",
 
   "@bp2": {
     display: "block",
-
     width: 500,
   },
 
