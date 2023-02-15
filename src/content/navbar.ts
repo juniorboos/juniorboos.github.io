@@ -3,7 +3,7 @@ import PortfolioLogo from "../assets/icons/portfolio-logo.svg";
 export default {
   logo: {
     imgUrl: PortfolioLogo,
-    url: "/",
+    url: "#intro-section",
   },
   navToggle: {
     label: "Toggle navigation",
@@ -11,23 +11,23 @@ export default {
   nav: [
     {
       name: "About",
-      id: "about-section",
+      id: "#about-section",
     },
     {
       name: "Experience",
-      id: "professional-section",
+      id: "#professional-section",
     },
     {
       name: "Projects",
-      id: "projects-section",
+      id: "#projects-section",
     },
     {
       name: "Articles",
-      id: "articles-section",
+      id: "#articles-section",
     },
     {
       name: "Contact",
-      id: "contact-section",
+      id: "#contact-section",
     },
   ],
 };

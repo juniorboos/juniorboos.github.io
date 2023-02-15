@@ -10,7 +10,6 @@ import {
 import { GiHamburgerMenu } from "@react-icons/all-files/gi/GiHamburgerMenu";
 import { useState } from "react";
 import NavbarContent from "../../../content/navbar";
-import { scrollIntoView } from "../../../hooks/scrollIntoView";
 
 const Header = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -20,10 +19,7 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <NavLogo
-        onClick={() => scrollIntoView("intro-section")}
-        aria-label="Return to homepage"
-      >
+      <NavLogo href={logo.url} aria-label="Return to homepage">
         <img src={logo.imgUrl} width={36} height={36} aria-hidden />
       </NavLogo>
       <NavToggler
@@ -37,10 +33,7 @@ const Header = () => {
         <NavList>
           {nav.map((navItem) => (
             <NavListItem key={navItem.name}>
-              <Typography
-                as="button"
-                onClick={() => scrollIntoView(navItem.id)}
-              >
+              <Typography as="a" href={navItem.id}>
                 {navItem.name}
               </Typography>
             </NavListItem>

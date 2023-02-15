@@ -25,7 +25,7 @@ const StyledHeader = styled("nav", {
   },
 });
 
-const NavLogo = styled("button", {
+const NavLogo = styled("a", {
   height: 80,
   display: "flex",
   alignItems: "center",

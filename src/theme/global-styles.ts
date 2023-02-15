@@ -8,6 +8,10 @@ const globalStyles = globalCss({
     boxSizing: "border-box",
   },
 
+  html: {
+    scrollBehavior: "smooth",
+  },
+
   /* width */
   "::-webkit-scrollbar": {
     width: 8,
