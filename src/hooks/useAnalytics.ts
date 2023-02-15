@@ -1,18 +1,25 @@
 import { useEffect } from "react";
-import { event, pageview } from "react-ga";
-const TRACKING_ID = "G-NLCR4H9BYN";
+import ReactGA from "react-ga4";
+const MEASUREMENT_ID = "G-NLCR4H9BYN";
+
+const sendPageview = (path: string) =>
+  ReactGA.send({
+    hitType: "pageview",
+    page: path,
+  });
 
 const useAnalytics = () => {
   useEffect(() => {
-    pageview(window.location.pathname);
+    ReactGA.initialize(MEASUREMENT_ID);
+    sendPageview(window.location.pathname);
   }, []);
 };
 
 const useAnalyticsEventTracker = (category: string) => {
   const eventTracker = (action: string, label: string) =>
-    event({ category, action, label });
+    ReactGA.event({ category, action, label });
 
   return eventTracker;
 };
 
-export { TRACKING_ID, useAnalytics, useAnalyticsEventTracker };
+export { MEASUREMENT_ID, useAnalytics, useAnalyticsEventTracker };
