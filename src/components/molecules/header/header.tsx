@@ -10,10 +10,16 @@ import {
 import { GiHamburgerMenu } from "@react-icons/all-files/gi/GiHamburgerMenu";
 import { useState } from "react";
 import NavbarContent from "../../../content/navbar";
+import { useAnalyticsEventTracker } from "../../../hooks/useAnalytics";
 
 const Header = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const handleToggle = () => setIsExpanded((prevIsExpanded) => !prevIsExpanded);
+
+  const eventTracker = useAnalyticsEventTracker("Header");
+
+  const handleNavigation = (sectionName: string) =>
+    eventTracker("navigate", sectionName);
 
   const { logo, navToggle, nav } = NavbarContent;
 
@@ -33,7 +39,11 @@ const Header = () => {
         <NavList>
           {nav.map((navItem) => (
             <NavListItem key={navItem.name}>
-              <Typography as="a" href={navItem.id}>
+              <Typography
+                as="a"
+                href={navItem.id}
+                onClick={() => handleNavigation(navItem.name)}
+              >
                 {navItem.name}
               </Typography>
             </NavListItem>
