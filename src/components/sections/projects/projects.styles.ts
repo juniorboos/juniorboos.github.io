@@ -60,6 +60,7 @@ const StyledOverlay = styled("div", {
 
 const StyledCard = styled("div", {
   position: "relative",
+  flexGrow: 1,
   borderRadius: "$1",
   overflow: "hidden",
   display: "flex",

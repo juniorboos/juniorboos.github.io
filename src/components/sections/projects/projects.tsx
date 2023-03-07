@@ -48,7 +48,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => (
         {project.technologies.map(({ Icon, name, url }) => (
           <li key={`${project.name}-${name}`}>
             <Anchor href={url} aria-label={name} target="_blank">
-              <Icon size="2rem" aria-hidden />
+              <Icon size="2rem" aria-hidden title={name} />
             </Anchor>
           </li>
         ))}
