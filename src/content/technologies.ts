@@ -19,7 +19,7 @@ import { SiStyledComponents } from "@react-icons/all-files/si/SiStyledComponents
 import { SiTensorflow } from "@react-icons/all-files/si/SiTensorflow";
 import { SiTypescript } from "@react-icons/all-files/si/SiTypescript";
 import { SiSimpleicons } from "@react-icons/all-files/si/SiSimpleicons";
-
+import { SiTailwindcss } from "@react-icons/all-files/si/SiTailwindcss";
 import { SiCss3 } from "@react-icons/all-files/si/SiCss3";
 
 const icons = {
@@ -178,6 +178,12 @@ const nodejs = {
   url: "https://nodejs.org/en/",
 };
 
+const tailwind = {
+  Icon: SiTailwindcss,
+  name: "TailwindCSS",
+  url: "https://tailwindcss.com/",
+};
+
 export {
   python,
   tensorflow,
@@ -205,4 +211,5 @@ export {
   nodejs,
   icons,
   stitches,
+  tailwind,
 };

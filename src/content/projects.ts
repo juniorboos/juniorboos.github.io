@@ -6,6 +6,7 @@ import {
   githubActions,
   googleCloud,
   icons,
+  jest,
   keras,
   python,
   react,
@@ -14,6 +15,7 @@ import {
   stitches,
   // sqlite,
   styledComponents,
+  tailwind,
   tensorflow,
   typescript,
 } from "./technologies";
@@ -38,12 +40,13 @@ export default {
         ],
       },
       {
-        name: "Arbeit",
+        name: "GitHub Profile Generator",
         description:
-          "A job finder app focused on temporary jobs (Castlethon Hackathon Winner)",
-        url: "https://devpost.com/software/arbeit",
-        technologies: [reactNative, firebase, figma],
+          "Website where you can input a set of details that you want to include in your github profile, and it generates a markdown that you can copy and paste into your README.",
+        url: "https://github.com/juniorboos/github-profile-generator",
+        technologies: [react, typescript, tailwind, githubActions, jest],
       },
+
       {
         name: "AgendaPG",
         description:
@@ -88,6 +91,13 @@ export default {
           "Conversation module for an assistant robot using machine learning and natural language processing.",
         url: "https://github.com/juniorboos/ChatbotIPB",
         technologies: [python, tensorflow, keras],
+      },
+      {
+        name: "Arbeit",
+        description:
+          "A job finder app focused on temporary jobs (Castlethon Hackathon Winner)",
+        url: "https://devpost.com/software/arbeit",
+        technologies: [reactNative, firebase, figma],
       },
     ],
   ],
