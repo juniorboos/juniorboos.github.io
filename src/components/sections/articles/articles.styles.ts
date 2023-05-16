@@ -56,4 +56,9 @@ const ArticleMeta = styled("div", {
   },
 });
 
-export { ArticlesList, ArticleCard, ArticleInfo, ArticleMeta };
+const ArticleImage = styled("img", {
+  objectFit: "cover",
+  minHeight: 210,
+});
+
+export { ArticlesList, ArticleCard, ArticleInfo, ArticleImage, ArticleMeta };

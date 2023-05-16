@@ -2,6 +2,7 @@ import { SectionTitle } from "~atoms/section-title";
 import { Typography } from "~atoms/typography";
 import {
   ArticleCard,
+  ArticleImage,
   ArticleInfo,
   ArticleMeta,
   ArticlesList,
@@ -24,12 +25,13 @@ const Articles = (props: SectionProps) => {
       <ArticlesList>
         {articles.map((article, idx) => (
           <ArticleCard key={`${article.title}-${idx}`}>
-            <img
+            <ArticleImage
               src={article.imgUrl}
               loading="lazy"
               alt={article.imgAlt}
               width={360}
               height={308}
+              style={{ minHeight: 210, objectFit: "cover" }}
             />
             <ArticleInfo>
               <Typography weight="bold">{article.title}</Typography>
