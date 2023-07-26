@@ -26,9 +26,9 @@ export default {
       imgAlt: "5 design systems tools presented in the article",
       title:
         "5 Useful Tools to Boost Your Component Library",
-      postedBy: "xgeeks",
+      postedBy: "myself",
       description:
-        "Building and maintaining a component library can be a challenging task. From component creation to accessibility compliance, ...",
+        "Building and maintaining a component library can be a challenging task. From component creation to accessibility compliance ...",
       url: "https://medium.com/@miltonboosj/5-useful-tools-to-boost-your-component-library-b94e2b39dd6a",
     },
   ],
