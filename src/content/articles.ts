@@ -21,5 +21,15 @@ export default {
         "Design systems are a critical component of any company’s design process, but they become even more important as a company scales...",
       url: "https://medium.com/xgeeks/how-to-create-and-adopt-design-systems-for-hyper-scaling-companies-a-6-step-approach-fd35dd430e3e",
     },
+    {
+      imgUrl: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*hNKxNPy87QAzRUuTO-l8PQ.png",
+      imgAlt: "5 design systems tools presented in the article",
+      title:
+        "5 Useful Tools to Boost Your Component Library",
+      postedBy: "xgeeks",
+      description:
+        "Building and maintaining a component library can be a challenging task. From component creation to accessibility compliance, ...",
+      url: "https://medium.com/@miltonboosj/5-useful-tools-to-boost-your-component-library-b94e2b39dd6a",
+    },
   ],
 };
