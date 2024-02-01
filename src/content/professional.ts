@@ -1,5 +1,6 @@
 import {
   css3,
+  docker,
   // cypress,
   figma,
   firebase,
@@ -24,10 +25,31 @@ export default {
   title: "Where I have worked",
   companies: [
     {
+      name: "Lisbon Nearshore",
+      url: "https://lisbonnearshore.com/",
+      role: "Senior Frontend Engineer",
+      period: "Aug 2023 - Present",
+      technologies: [
+        react,
+        javascript,
+        typescript,
+        storybook,
+        figma,
+        materialui,
+        jest,
+        docker,
+      ],
+      responsabilities: [
+        "Contribute to the ongoing development of Fignum's client payment platform, focusing on a user-friendly interface for efficient transactions.",
+        "Build and maintain a customized IT operations platform, simplifying client management and enhancing operational efficiency.",
+        "Continuously revitalize the UI codebase, implementing best practices to improve maintainability and enhance the visual appeal of the platform.",
+      ],
+    },
+    {
       name: "xgeeks",
       url: "https://xgeeks.io",
-      role: "Javascript Engineer",
-      period: "Aug 2021 - Present",
+      role: "Senior Javascript Engineer",
+      period: "Aug 2021 - Aug 2023",
       technologies: [
         react,
         nextjs,

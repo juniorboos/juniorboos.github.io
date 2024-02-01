@@ -46,8 +46,7 @@ const CompanyListItem = styled("button", {
   border: "none",
   width: "100%",
 
-  display: "flex",
-  alignItems: "center",
+  textAlign: "left",
   padding: "$2 $4",
   cursor: "pointer",
 

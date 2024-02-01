@@ -21,6 +21,7 @@ import { SiTypescript } from "@react-icons/all-files/si/SiTypescript";
 import { SiSimpleicons } from "@react-icons/all-files/si/SiSimpleicons";
 import { SiTailwindcss } from "@react-icons/all-files/si/SiTailwindcss";
 import { SiCss3 } from "@react-icons/all-files/si/SiCss3";
+import { FaDocker } from "@react-icons/all-files/fa/FaDocker";
 
 const icons = {
   Icon: SiSimpleicons,
@@ -184,6 +185,12 @@ const tailwind = {
   url: "https://tailwindcss.com/",
 };
 
+const docker = {
+  Icon: FaDocker,
+  name: "Docker",
+  url: "https://www.docker.com/",
+};
+
 export {
   python,
   tensorflow,
@@ -212,4 +219,5 @@ export {
   icons,
   stitches,
   tailwind,
+  docker,
 };
