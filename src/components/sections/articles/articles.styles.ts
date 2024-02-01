@@ -2,14 +2,9 @@ import { styled } from "~stitches";
 
 const ArticlesList = styled("div", {
   display: "flex",
-  justifyContent: "center",
   gap: "$8",
-  flexWrap: "wrap",
-  marginBottom: "$8",
-
-  "@bp2": {
-    flexWrap: "nowrap",
-  },
+  overflowX: "auto",
+  paddingBottom: "$4",
 });
 
 const ArticleCard = styled("div", {
@@ -20,6 +15,8 @@ const ArticleCard = styled("div", {
   borderRadius: "$1",
   overflow: "hidden",
 
+  minWidth: 280,
+
   boxShadow: "2px 5px 5px rgba(0, 0, 0, 0.5)",
 
   "& img": {
@@ -28,6 +25,7 @@ const ArticleCard = styled("div", {
   },
 
   "@bp2": {
+    minWidth: 360,
     maxWidth: 360,
   },
 });
