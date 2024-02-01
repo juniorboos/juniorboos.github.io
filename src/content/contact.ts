@@ -10,7 +10,7 @@ export default {
   },
   location: {
     label: "Location",
-    description: "Leiria, Portugal, 2410-170",
+    description: "Batalha, Portugal, 2440-194",
   },
   phone: {
     label: "Phone Number",
