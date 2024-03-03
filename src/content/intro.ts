@@ -26,6 +26,6 @@ export default {
   ],
   cv: {
     text: "Download my CV",
-    url: "https://drive.google.com/file/d/1iZOVokY0SrYualPx1PSRVqsz8fXO8FYT/view?usp=sharing",
+    url: "https://drive.google.com/file/d/1HIZleWkBlLphtsnm1SAPibnF7sM_tWH4/view?usp=sharing",
   },
 };
