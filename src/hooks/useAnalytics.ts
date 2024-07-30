@@ -10,7 +10,7 @@ const sendPageview = (path: string) =>
 
 const useAnalytics = () => {
   useEffect(() => {
-    ReactGA.initialize(MEASUREMENT_ID);
+    // ReactGA.initialize(MEASUREMENT_ID);
     sendPageview(window.location.pathname);
   }, []);
 };
